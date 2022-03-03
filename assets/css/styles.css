@@ -1,1 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Smooch+Sans:wght@600&display=swap');
+
+body {
+    background-color: #DECC2A;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+    justify-content: center;
+}
+
+.main-headers {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    background-color: red;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 4em;
+    color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-family: Smooch Sans, Arial;
+}
+
+.playerName{
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Nunito,Helvetica;
+    
+}
+
+.game-link {
+    background-color: green;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 3em;
+    padding: 15px;
+    margin-top: 15px;
+    font-family: Smooch Sans, Arial;
+}
+
+.game-link a {
+    text-decoration: none;
+    color: white;
+}
+
+.game-features {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.game-features button {
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: Nunito,Helvetica;
+    font-weight: bold;
+}
