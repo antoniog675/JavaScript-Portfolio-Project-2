@@ -33,6 +33,7 @@ body {
     border-radius: 10px;
     padding: 10px;
     font-family: Nunito,Helvetica;
+    border-style: none;
     
 }
 
@@ -64,6 +65,7 @@ body {
     padding: 5px;
     font-family: Nunito, Helvetica;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .container2 {
