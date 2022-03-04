@@ -93,6 +93,13 @@ body {
     text-align: center;
 }
 
+p {
+    background-color: rgba(226, 230, 5, 0.4);
+    border-radius: 10px;
+    padding: 5px;
+    font-family: Nunito;
+    margin: 10px;
+}
 .game-answers {
     display: flex;
     flex-direction: column;
@@ -105,6 +112,7 @@ body {
     margin: 10px 0 10px 0;
     border-radius: 10px;
     border-style:none;
+    font-family: Smooch sans;
 }
 
 .game-answers button:hover {
@@ -137,4 +145,8 @@ body {
 
 #restart-button:hover {
     cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    
 }
