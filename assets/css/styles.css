@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20vh;
+    margin-top: 15vh;
     justify-content: center;
 }
 
@@ -37,13 +37,14 @@ body {
 }
 
 .game-link {
-    background-color: green;
+    background-color: #00D203;
     border-radius: 10px;
     text-align: center;
     font-size: 3em;
     padding: 15px;
     margin-top: 15px;
     font-family: Smooch Sans, Arial;
+    border: none;
 }
 
 .game-link a {
@@ -61,6 +62,77 @@ body {
     margin: 5px;
     border-radius: 5px;
     padding: 5px;
-    font-family: Nunito,Helvetica;
+    font-family: Nunito, Helvetica;
     font-weight: bold;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+    justify-content: center;
+    font-family: Nunito, Helvetica;
+}
+
+.user-assist-features {
+    font-size: 1.2em;
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: rgba(226, 230, 5, 0.4);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.game-question-answers  {
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.game-answers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-answers button {
+    font-size: 1.05em;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    border-radius: 10px;
+    border-style:none;
+}
+
+.game-answers button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.home-next-restart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 35%;
+    font-size: 1.5em;
+    background-color: rgba(226, 230, 5, 0.4);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#game-question-flag {
+    background-image: url(../images/brazil-image.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    width: 100%;
+}
+
+#hint:hover {
+    cursor: pointer;
+}
+
+#restart-button:hover {
+    cursor: pointer;
 }
