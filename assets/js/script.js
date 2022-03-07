@@ -15,40 +15,40 @@ function pop() {
 
 // This will load the first question, will listen for the id "play-game" to be clicked, then first question will be loaded.
 
-var brazil = new Image(100,200); 
+var brazil = new Image(300,200); 
 brazil.src = "../assets/images/brazil-image.jpeg"
 
-var argentina = new Image(100,200); 
+var argentina = new Image(300,200); 
 argentina.src = "../assets/images/argentina-flag.jpeg"
 
-var ecuador = new Image(100,200); 
-ecuador.src = "../assets/images/ecuador.flag"
+var ecuador = new Image(300,200); 
+ecuador.src = "../assets/images/ecuador.flag.jpeg"
 
-var bolivia = new Image(100,200); 
+var bolivia = new Image(300,200); 
 bolivia.src = "../assets/images/Flag-Bolivia.jpeg"
 
-var chile = new Image(100,200); 
+var chile = new Image(300,200); 
 chile.src = "../assets/images/Flag-Chile.jpeg"
 
-var colombia = new Image(100,200); 
+var colombia = new Image(300,200); 
 colombia.src = "../assets/images/Flag-Colombia.jpg"
 
-var peru = new Image(100,200); 
+var peru = new Image(300,200); 
 peru.src = "../assets/images/Flag-Peru.jpeg"
 
-var guayana = new Image(100,200); 
+var guayana = new Image(300,200); 
 guayana.src = "../assets/images/guayana-flag.jpeg"
 
-var paraguay = new Image(100,200); 
+var paraguay = new Image(300,200); 
 paraguay.src = "../assets/images/paraguay.jpeg"
 
-var suriname = new Image(100,200); 
+var suriname = new Image(300,200); 
 suriname.src = "../assets/images/suriname-flag.jpeg"
 
-var uruguay = new Image(100,200); 
+var uruguay = new Image(300,200); 
 uruguay.src = "../assets/images/uruguay-flag.jpeg"
 
-var venezuela = new Image(100,200); 
+var venezuela = new Image(300,200); 
 venezuela.src = "../assets/images/venezuela-flag.jpeg"
 
 const myQuestions = [
@@ -64,7 +64,7 @@ const myQuestions = [
     },
 
     {
-        question: "Bolivia",
+        question: bolivia,
         answer: {
             a: "Colombia",
             b: "Guayana",
@@ -75,7 +75,7 @@ const myQuestions = [
     },
 
     {
-        question: "Argentina",
+        question: argentina,
         answer: {
             a: "Italy",
             b: "Argentina",
@@ -86,7 +86,7 @@ const myQuestions = [
     },
 
     {
-        question: "Ecuador",
+        question: ecuador,
         answer: {
             a: "Chile",
             b: "Venezuela",
@@ -97,7 +97,7 @@ const myQuestions = [
     },
 
     {
-        question: "Chile",
+        question: chile,
         answer: {
             a: "Chile  ",
             b: "Morocco",
@@ -108,7 +108,7 @@ const myQuestions = [
     },
 
     {
-        question: "Colombia",
+        question: colombia,
         answer: {
             a: "Ecuador",
             b: "Colombia",
@@ -119,7 +119,7 @@ const myQuestions = [
     },
 
     {
-        question: "Peru",
+        question: peru,
         answer: {
             a: "Peru",
             b: "Costa Rica",
@@ -130,7 +130,7 @@ const myQuestions = [
     },
 
     {
-        question: "Guayana",
+        question: guayana,
         answer: {
             a: "Bolivia",
             b: "Congo",
@@ -141,7 +141,7 @@ const myQuestions = [
     },
 
     {
-        question: "Paraguay",
+        question: paraguay,
         answer: {
             a: "Argentina",
             b: "Mexico",
@@ -152,7 +152,7 @@ const myQuestions = [
     },
 
     {
-        question: "Suriname",
+        question: suriname,
         answer: {
             a: "Belgium",
             b: "Suriname",
@@ -163,7 +163,7 @@ const myQuestions = [
     },
 
     {
-        question: "Uruguay",
+        question: uruguay,
         answer: {
             a: "Uruguay",
             b: "Paraguay",
@@ -174,7 +174,7 @@ const myQuestions = [
     },
 
     {
-        question: "Venezuela",
+        question: venezuela,
         answer: {
             a: "Guayana",
             b: "Ecuador",
@@ -188,8 +188,12 @@ const myQuestions = [
 
 //Will load random number between index 0 and index 12, so between the 12 questions
 
+document.addEventListener("DOMContentLoaded", getQuestion);
+
+alreadyAskedQuestion = []
 function getQuestion() {
     const random = Math.floor(Math.random() * myQuestions.length);
+
     question = myQuestions[random]
     flag = question.question
     answer1 = question.answer.a
@@ -201,6 +205,30 @@ function getQuestion() {
     document.getElementById("answer3").innerHTML = answer3
     document.getElementById("answer4").innerHTML = answer4
     document.getElementById("game-question-flag").appendChild(flag)
+    alreadyAskedQuestion.splice(random)
 }
 // Need to append the value from the returned object, to the questions for user....
 
+//Next button working
+let next = document.getElementById("next-button")
+next.addEventListener("click", getQuestion)
+
+
+// let currentScore = 0;
+
+// function userAnswer() {
+    
+// }
+
+// if(userAnswer === currentQuestion.correctAnswer){
+//     numCorrect++;
+//     answerContainers[questionNumber].style.color = 'lightgreen';
+//   }
+//   else{
+//     answerContainers[questionNumber].style.color = 'red';
+//   };
+
+//When answer is answered, show next button, add event listener to get next question ready
+
+
+//Create loop for to check when all questions are answered, will go to highscore page, collect number of answers answered correctly and display it at the end.
