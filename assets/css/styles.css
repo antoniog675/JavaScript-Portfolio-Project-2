@@ -93,7 +93,7 @@ body {
     text-align: center;
 }
 
-p {
+.game-question-answers p {
     background-color: rgba(226, 230, 5, 0.4);
     border-radius: 10px;
     padding: 5px;
@@ -130,7 +130,7 @@ p {
     border-radius: 10px;
     padding: 5px;
 }
-
+/*
 #game-question-flag {
     background-image: url(../images/brazil-image.jpeg);
     background-size: cover;
@@ -138,6 +138,7 @@ p {
     height: 150px;
     width: 100%;
 }
+*/
 
 #hint:hover {
     cursor: pointer;
@@ -147,6 +148,29 @@ p {
     cursor: pointer;
 }
 
+/* Styling for pop up box*/
+ #rules-message-box {
+     background-color: #fce304;
+     width: 500px;
+     overflow: hidden;
+     border-radius: 10px;
+     position: absolute;
+     top: 40%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     z-index: 9999;
+     padding: 10px;
+     text-align: center;
+     display: none;
+ }
+.rules h1 {
+    font-family: Smooch sans;
+}
+ .rules ul {
+     text-align: left;
+     font-family: Nunito;
+ }
+
 @media only screen and (max-width: 600px) {
-    
+
 }
