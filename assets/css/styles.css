@@ -131,6 +131,18 @@ body {
     padding: 0 10px;
 }
 
+.game-question-answers .game-answers .option.correct {
+    background-color: rgb(50, 209, 50);
+    color: white;
+    font-weight: 500;
+}
+
+.game-question-answers .game-answers .option.incorrect {
+    background-color: rgb(238, 12, 12);
+    color: white;
+    font-weight: 500;
+}
+
 /* .game-answers button {
     font-size: 1.05em;
     width: 100%;
