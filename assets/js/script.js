@@ -12,7 +12,86 @@ function pop() {
 }
 
 // Main JS
+const exit_button = document.querySelector(".end-game-buttons .quit")
+const restart_button = document.querySelector(".end-game-buttons .restart")
+const quiz_box = document.querySelector(".cointainer2")
 
+let question_count = 0;
+
+//getting questions
+
+function showQuestion(index) {
+    const que_text = document.querySelector("#game-question-flag");
+    const option_list = document.querySelector(".game-answers");
+    let que_tag = '<span>' + questions[index].question +'</span>';
+    let option_tag = '<div class="option">'+ questions[index].answer[0] +'<span></span></div>'
+                    + '<div class="option">'+ questions[index].answer[1] +'<span></span></div>'
+                    + '<div class="option">'+ questions[index].answer[2] +'<span></span></div>'
+                    + '<div class="option">'+ questions[index].answer[3] +'<span></span></div>';
+    que_text.innerHTML = que_tag;
+    option_list.innerHTML = option_tag;
+}
+
+
+const questions = [
+    {
+        num: 1,
+        question: "Where is Rio de janiero located",
+        answer: [
+            "Brazil",
+            "Nigeria",
+            "Peru",
+            "Lemon"
+            ],
+        correctAnswer: "Brazil"
+    },
+
+    {
+        num: 2,
+        question: "Which Country is Antonio from?",
+        answer: [
+            "Colombia",
+            "Guayana",
+            "England",
+            "Bolivia"
+            ],
+        correctAnswer: "Bolivia"
+    },
+
+    {
+        num: 3,
+        question: "Which national football team did Lionel Messi play for?",
+        answer: [
+            "Italy",
+            "Argentina",
+            "Peru",
+            "Uruguay"
+        ],
+        correctAnswer: "Argentina"
+    },
+    {
+        num: 4,
+        question: "You could say this country is along the equator.......",
+        answer: [
+            "Chile",
+            "Venezuela",
+            "Ecuador",
+            "Colombia",
+        ],
+        correctAnswer: "Ecuador"
+    },
+
+    {
+        num: 5,
+        question: "This country sounds like a vegetable...",
+        answer: [
+            "Chile",
+            "Morocco",
+            "Cuba",
+            "Puerto Rico"
+        ],
+        correctAnswer: "Chile"
+    },]
 // This will load the first question, will listen for the id "play-game" to be clicked, then first question will be loaded.
 
 var brazil = new Image(300,200); 
@@ -186,15 +265,18 @@ const myQuestions = [
 ]
 // End of questions list
 
-//Will load random number between index 0 and index 12, so between the 12 questions
+//Will load random number between index 0 and index 11, so between the 12 questions
 
-document.addEventListener("DOMContentLoaded", getQuestion);
+document.addEventListener("DOMContentLoaded", showQuestion(0));
 
 function getQuestion() {
     indexQuestion = getQuestionIndex()
+    
     question = myQuestions[indexQuestion]
     rightAnswer = question.correctAnswer
+
     console.log(rightAnswer)
+    console.log(question)
 
     flag = question.question
     answer1 = question.answer.a
@@ -214,22 +296,19 @@ function getQuestion() {
         i.addEventListener('click', function() {
             clickedAnswer = i.innerHTML
             if (clickedAnswer == rightAnswer) {
-                i.style.backgroundColor = "green"
+                this.style.backgroundColor = "green"
+                incrementScore()
             } else {
-                i.style.backgroundColor = "red"
+                this.style.backgroundColor = "red"
             }
+            //Disable anymore clicks
         });
     });
-
-    // if(i.innerHTML == question) {
-    //     this.style.backgroundColor = "green";
-    // }
-    
-    //Add event listener for buttons, see if userAnswer matches the correctAnswer in the object() 
     
     let next = document.getElementById("next-button")
-    next.addEventListener("click", getQuestion)
-
+    next.addEventListener("click", getQuestion, getQuestionIndex)
+    // resetButtonColor = document.querySelectorAll(".button").style.backgroundColor = "white"
+    //when next is pressed, colors go back to default
 }
 
 function getQuestionIndex() {
@@ -237,54 +316,21 @@ function getQuestionIndex() {
     return randomQuestion
 }
 
-// function userAnswer() {
-//     if (button "click" == question.correctAnswer)style.background-color.green;
-//     else {
-//         Element.background-color.red;
-//     }
-
-// }
-
-// function getQuestion() {
-//     let randomQuestion = Math.floor(Math.random() * myQuestions.length);
-//     question = myQuestions[randomQuestion]
-    
-//     flag = question.question
-//     answer1 = question.answer.a
-//     answer2 = question.answer.b
-//     answer3 = question.answer.c
-//     answer4 = question.answer.d
-
-//     document.getElementById("answer1").innerHTML = answer1
-//     document.getElementById("answer2").innerHTML = answer2
-//     document.getElementById("answer3").innerHTML = answer3
-//     document.getElementById("answer4").innerHTML = answer4
-//     removeAllChildNodes(document.getElementById("game-question-flag"))
-//     document.getElementById("game-question-flag").appendChild(flag)
-    
-//     let next = document.getElementById("next-button")
-//     next.addEventListener("click", getQuestion)
-    
-// }
-
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
 }
-
-document.getElementById("answer1").addEventListener("click", checkAnswer());
-document.getElementById("answer2").addEventListener("click", checkAnswer());
-document.getElementById("answer3").addEventListener("click", checkAnswer());
-document.getElementById("answer4").addEventListener("click", checkAnswer());
-
 function checkAnswer() {
     console.log("Hello")
 }
 
 // function checkUserAnswerCorrect()
 
-// function incrementScore()
+function incrementScore() {
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++oldScore;
+}
 
 // let currentScore = 0;
 
