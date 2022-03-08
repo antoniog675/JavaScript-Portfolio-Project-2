@@ -16,14 +16,26 @@ const exit_button = document.querySelector(".end-game-buttons .quit")
 const restart_button = document.querySelector(".end-game-buttons .restart")
 const quiz_box = document.querySelector(".cointainer2")
 
+
 let question_count = 0;
 
+const next_button = document.querySelector(".next-button");
+
+//If next button clicked
+next_button.onclick = ()=>{
+    if(question_count < questions.length - 1){
+    question_count++;
+    showQuestion(question_count);
+    } else {
+        console.log("Questions complete")
+    }
+}
 //getting questions
 
 function showQuestion(index) {
     const que_text = document.querySelector("#game-question-flag");
     const option_list = document.querySelector(".game-answers");
-    let que_tag = '<span>' + questions[index].question +'</span>';
+    let que_tag = '<span>'+ questions[index].num + '. '+ questions[index].question +'</span>';
     let option_tag = '<div class="option">'+ questions[index].answer[0] +'<span></span></div>'
                     + '<div class="option">'+ questions[index].answer[1] +'<span></span></div>'
                     + '<div class="option">'+ questions[index].answer[2] +'<span></span></div>'
@@ -92,6 +104,8 @@ const questions = [
         ],
         correctAnswer: "Chile"
     },]
+
+    document.addEventListener("DOMContentLoaded", showQuestion(0));
 // This will load the first question, will listen for the id "play-game" to be clicked, then first question will be loaded.
 
 var brazil = new Image(300,200); 
@@ -266,8 +280,6 @@ const myQuestions = [
 // End of questions list
 
 //Will load random number between index 0 and index 11, so between the 12 questions
-
-document.addEventListener("DOMContentLoaded", showQuestion(0));
 
 function getQuestion() {
     indexQuestion = getQuestionIndex()
