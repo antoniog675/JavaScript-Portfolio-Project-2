@@ -9,7 +9,7 @@
 <body>
     <div class="container2">
         <div class="user-assist-features">
-            <div>Score: <span id="Score">0</span></div>
+            <div>Score: <span id="score">0</span></div>
             <div>30 second timer</div>
             <div>
             <button id="hint"><i class="fa-solid fa-lightbulb"></i></button>
@@ -21,16 +21,16 @@
             <span><p>What is the country?</p></span>
             <div class="game-answers">
                 <div>
-                    <button id="answer1">Answer 1</button>
+                    <button id="answer1" class="button">Answer 1</button>
                 </div>
                 <div>
-                    <button id="answer2">Answer 2</button>
+                    <button id="answer2" class="button">Answer 2</button>
                 </div>
                 <div>
-                    <button id="answer3">Answer 3</button>
+                    <button id="answer3" class="button">Answer 3</button>
                 </div>
                 <div>
-                    <button id="answer4">Answer 4</button>
+                    <button id="answer4" class="button">Answer 4</button>
                 </div>
             </div>
         </div>
@@ -40,6 +40,21 @@
                 <button id="next-button">Next</button>
             </span>
             <button id="restart-button"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+        </div>
+    </div>
+
+    <!-- Results box-->
+    <div class="result-box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete-text">You've Completed the quiz</div>
+        <div class="score-text">
+            <span>You got <p>2</p>out of<p>12</p></span>
+        </div>
+        <div class="end-game-buttons">
+            <button>Replay Game</button>
+            <button class="quit">Quit Game</button>
         </div>
     </div>
 
