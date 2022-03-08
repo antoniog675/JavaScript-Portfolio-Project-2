@@ -106,7 +106,32 @@ body {
     justify-content: space-between;
 }
 
-.game-answers button {
+.game-question-answers .game-answers .option {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.game-question-answers .game-answers .option:hover{
+    background-color: rgb(230, 216, 216);
+}
+
+.total-que span { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total-que span p {
+    padding: 0 10px;
+}
+
+/* .game-answers button {
     font-size: 1.05em;
     width: 100%;
     margin: 10px 0 10px 0;
@@ -118,7 +143,7 @@ body {
 .game-answers button:hover {
     background-color: lightgray;
     cursor: pointer;
-}
+} */
 
 .home-next-restart {
     display: flex;
@@ -129,19 +154,7 @@ body {
     background-color: rgba(226, 230, 5, 0.4);
     border-radius: 10px;
     padding: 5px;
-}
-/*
-#game-question-flag {
-    background-image: url(../images/brazil-image.jpeg);
-    background-size: cover;
-    background-position: center;
-    height: 150px;
-    width: 100%;
-}
-*/
-
-#hint:hover {
-    cursor: pointer;
+    z-index: 10;
 }
 
 #restart-button:hover {
@@ -170,6 +183,69 @@ body {
      text-align: left;
      font-family: Nunito;
  }
+
+ /* Style for results box, end of game*/
+
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    height: 20px;
+    background-color: rgb(243, 181, 65);
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.timer .time-text {
+    font-weight: 200;
+}
+
+.timer .timer-sec {
+    font-weight: 500;
+    background-color: green;
+    border-radius: 10px;
+    width: 45px;
+    text-align: center;
+    color: white;
+
+}
+
+ .result-box {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background-color: rgb(33, 223, 33);
+     padding: 10px;
+     text-align: center;
+     border-radius: 10px;
+     width: 50%;
+     display: flex;
+     flex-direction: column;
+     font-size: 1.5em;
+     border-style: double;
+     opacity: 0;
+ }
+
+ .result-box .complete-text{
+     font-weight: 600;
+ }
+
+ .end-game-buttons button{
+     color: black;
+     background-color: white;
+     font-size: 18px;
+     padding: 5px;
+     border-radius: 10px;
+ }
+
+ .end-game-buttons button:hover {
+     background-color: black;
+     color: white;
+ }
+
 
 @media only screen and (max-width: 600px) {
 
