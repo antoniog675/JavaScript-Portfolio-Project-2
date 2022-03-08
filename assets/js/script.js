@@ -190,28 +190,36 @@ const myQuestions = [
 
 document.addEventListener("DOMContentLoaded", getQuestion);
 
-alreadyAskedQuestion = []
 function getQuestion() {
-    const random = Math.floor(Math.random() * myQuestions.length);
-
-    question = myQuestions[random]
+    let randomQuestion = Math.floor(Math.random() * myQuestions.length);
+    question = myQuestions[randomQuestion]
+    
     flag = question.question
     answer1 = question.answer.a
     answer2 = question.answer.b
     answer3 = question.answer.c
     answer4 = question.answer.d
-    document.getElementById("answer1").innerHTML = answer1
-    document.getElementById("answer2").innerHTML = answer2
-    document.getElementById("answer3").innerHTML = answer3
-    document.getElementById("answer4").innerHTML = answer4
+
+    document.getElementById("answer1").innerHTML = answer1;
+    document.getElementById("answer2").innerHTML = answer2;
+    document.getElementById("answer3").innerHTML = answer3;
+    document.getElementById("answer4").innerHTML = answer4;
+    removeAllChildNodes(document.getElementById("game-question-flag"))
     document.getElementById("game-question-flag").appendChild(flag)
-    alreadyAskedQuestion.splice(random)
+    
+    let next = document.getElementById("next-button")
+    next.addEventListener("click", getQuestion)
+    
 }
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+
 // Need to append the value from the returned object, to the questions for user....
 
 //Next button working
-let next = document.getElementById("next-button")
-next.addEventListener("click", getQuestion)
 
 
 // let currentScore = 0;
