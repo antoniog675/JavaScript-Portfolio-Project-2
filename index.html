@@ -12,14 +12,29 @@
             <div class="title">Flags of South America</div>
             <input class="playerName" type="text" id="playerName" name="playerName" placeholder="Enter your name">
             <div class="game-link">
-            <a href="game.html">Play Game</a>
+            <a href="game.html" id="play-game">Play Game</a>
             </div>
         </div>
         <div class="game-features">
-            <button>Rules of the Game</button>
+            <button onclick="pop()">Rules of the Game</button>
             <button>Highscores</button>
             <button id="toggle-sound"><i class="fa-solid fa-volume-high"></i></button>
             <button id="toggle-sound"><i class="fa-solid fa-volume-xmark"></i></button>
+        </div>
+    </div>
+    <div id="rules-message-box">
+        <div class="rules">
+            <h1>Rules Of The Game</h1>
+            <ul>
+                <li>Earn points by getting the questions right!</li>
+                <li>A flag from South America will be generated, you have to guess which country that flag belongs to.</li>
+                <li>There are 12 questions you have to answer to complete the game.</li>
+                <li>There will be a 30 second timer to add pressure to the game.</li>
+                <li>Press the light bulb to get hints if you are stuck.</li>
+                <li>If you decide to leave the game you can select the little house figure to leave the game, or you can restart the game with the arrow on the bottom right of the game</li>
+                <li>When you answer the question, a 'Next button' will appear to move on to the next question.</li>
+            </ul>
+            <button onclick="pop()">Close</button>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/d104fe311e.js" crossorigin="anonymous"></script>

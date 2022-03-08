@@ -184,7 +184,7 @@ const myQuestions = [
         correctAnswer: "d"
     },
 ]
-// End of questions
+// End of questions list
 
 //Will load random number between index 0 and index 12, so between the 12 questions
 
@@ -200,10 +200,10 @@ function getQuestion() {
     answer3 = question.answer.c
     answer4 = question.answer.d
 
-    document.getElementById("answer1").innerHTML = answer1;
-    document.getElementById("answer2").innerHTML = answer2;
-    document.getElementById("answer3").innerHTML = answer3;
-    document.getElementById("answer4").innerHTML = answer4;
+    document.getElementById("answer1").innerHTML = answer1
+    document.getElementById("answer2").innerHTML = answer2
+    document.getElementById("answer3").innerHTML = answer3
+    document.getElementById("answer4").innerHTML = answer4
     removeAllChildNodes(document.getElementById("game-question-flag"))
     document.getElementById("game-question-flag").appendChild(flag)
     
@@ -211,6 +211,7 @@ function getQuestion() {
     next.addEventListener("click", getQuestion)
     
 }
+
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
