@@ -10,9 +10,9 @@
     <div class="container2">
         <div class="user-assist-features">
             <div>Score: <span id="score">0</span></div>
-            <div>30 second timer</div>
-            <div>
-            <button id="hint"><i class="fa-solid fa-lightbulb"></i></button>
+            <div class="timer">
+                <div class="time-text">Time left:</div>
+                <div class="timer-sec">15</div>
             </div>
         </div>
         <div class="game-question-answers">
@@ -20,17 +20,17 @@
             </div>
             <span><p>What is the country?</p></span>
             <div class="game-answers">
-                <div>
-                    <button id="answer1" class="button">Answer 1</button>
+                <div class="option">
+                    <span></span>
                 </div>
-                <div>
-                    <button id="answer2" class="button">Answer 2</button>
+                <div class="option">
+                    <span></span>
                 </div>
-                <div>
-                    <button id="answer3" class="button">Answer 3</button>
+                <div class="option">
+                    <span></span>
                 </div>
-                <div>
-                    <button id="answer4" class="button">Answer 4</button>
+                <div class="option">
+                    <span></span>
                 </div>
             </div>
         </div>
@@ -48,12 +48,12 @@
         <div class="icon">
             <i class="fas fa-crown"></i>
         </div>
-        <div class="complete-text">You've Completed the quiz</div>
+        <div class="complete-text">You've Completed the quiz!</div>
         <div class="score-text">
-            <span>You got <p>2</p>out of<p>12</p></span>
+            <span>You scored<p>2</p>out of<p>12</p></span>
         </div>
         <div class="end-game-buttons">
-            <button>Replay Game</button>
+            <button class="restart">Replay Game</button>
             <button class="quit">Quit Game</button>
         </div>
     </div>
