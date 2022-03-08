@@ -16,7 +16,7 @@ const exit_button = document.querySelector(".end-game-buttons .quit")
 const restart_button = document.querySelector(".end-game-buttons .restart")
 const quiz_box = document.querySelector(".cointainer2")
 
-
+const option_list = document.querySelector(".game-answers");
 let question_count = 0;
 let que_number = 1;
 
@@ -37,7 +37,7 @@ next_button.onclick = ()=>{
 
 function showQuestion(index) {
     const que_text = document.querySelector("#game-question-flag");
-    const option_list = document.querySelector(".game-answers");
+    // const option_list = document.querySelector(".game-answers");
     let que_tag = '<span>'+ questions[index].num + '. '+ questions[index].question +'</span>';
     let option_tag = '<div class="option">'+ questions[index].answer[0] +'<span></span></div>'
                     + '<div class="option">'+ questions[index].answer[1] +'<span></span></div>'
@@ -54,6 +54,7 @@ function showQuestion(index) {
 function optionSelected(answer) {
     let userAns = answer.textContent;
     let correctAns = questions[question_count].correctAnswer;
+    let allOptions = option_list.children.length;
     if(userAns == correctAns) {
         answer.classList.add("correct");
         console.log("answer is correct")
@@ -63,6 +64,9 @@ function optionSelected(answer) {
     }
 
     //Once user answer is returned, options will be disabled
+    for (let i = 0; i < allOptions; i++) {
+        option_list.children[i].classList.add("disabled")
+    }
 }
 
 function questionsCounter(index) {
