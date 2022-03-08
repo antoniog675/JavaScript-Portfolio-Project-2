@@ -18,6 +18,7 @@ const quiz_box = document.querySelector(".cointainer2")
 
 
 let question_count = 0;
+let que_number = 1;
 
 const next_button = document.querySelector(".next-button");
 
@@ -25,7 +26,9 @@ const next_button = document.querySelector(".next-button");
 next_button.onclick = ()=>{
     if(question_count < questions.length - 1){
     question_count++;
+    que_number++;
     showQuestion(question_count);
+    questionsCounter(que_number);
     } else {
         console.log("Questions complete")
     }
@@ -42,8 +45,31 @@ function showQuestion(index) {
                     + '<div class="option">'+ questions[index].answer[3] +'<span></span></div>';
     que_text.innerHTML = que_tag;
     option_list.innerHTML = option_tag;
+    const option = option_list.querySelectorAll(".option");
+    for (let i = 0; i < option.length; i++) {
+        option[i].setAttribute("onclick", "optionSelected(this)")
+    }
 }
 
+function optionSelected(answer) {
+    let userAns = answer.textContent;
+    let correctAns = questions[question_count].correctAnswer;
+    if(userAns == correctAns) {
+        answer.classList.add("correct");
+        console.log("answer is correct")
+    } else {
+        answer.classList.add("incorrect")
+        console.log("answer is wrong")
+    }
+
+    //Once user answer is returned, options will be disabled
+}
+
+function questionsCounter(index) {
+    const question_counter = document.querySelector(".total-que");
+    let totalQuestionCount = '<span><p>'+ index +'</p>Of<p>'+ questions.length +'</p>Questions</span>';
+    question_counter.innerHTML = totalQuestionCount;
+}
 
 const questions = [
     {
@@ -105,7 +131,7 @@ const questions = [
         correctAnswer: "Chile"
     },]
 
-    document.addEventListener("DOMContentLoaded", showQuestion(0));
+    document.addEventListener("DOMContentLoaded", showQuestion(0), questionsCounter(1));
 // This will load the first question, will listen for the id "play-game" to be clicked, then first question will be loaded.
 
 var brazil = new Image(300,200); 
@@ -144,221 +170,137 @@ uruguay.src = "../assets/images/uruguay-flag.jpeg"
 var venezuela = new Image(300,200); 
 venezuela.src = "../assets/images/venezuela-flag.jpeg"
 
-const myQuestions = [
-    {
-        question: brazil,
-        answer: {
-            a: "Brazil",
-            b: "Nigeria",
-            c: "Peru",
-            d: "Lemon"
-        },
-        correctAnswer: "Brazil"
-    },
+// const myQuestions = [
+//     {
+//         question: brazil,
+//         answer: {
+//             a: "Brazil",
+//             b: "Nigeria",
+//             c: "Peru",
+//             d: "Lemon"
+//         },
+//         correctAnswer: "Brazil"
+//     },
 
-    {
-        question: bolivia,
-        answer: {
-            a: "Colombia",
-            b: "Guayana",
-            c: "England",
-            d: "Bolivia"
-        },
-        correctAnswer: "Bolivia"
-    },
+//     {
+//         question: bolivia,
+//         answer: {
+//             a: "Colombia",
+//             b: "Guayana",
+//             c: "England",
+//             d: "Bolivia"
+//         },
+//         correctAnswer: "Bolivia"
+//     },
 
-    {
-        question: argentina,
-        answer: {
-            a: "Italy",
-            b: "Argentina",
-            c: "Peru",
-            d: "Uruguay"
-        },
-        correctAnswer: "Argentina"
-    },
+//     {
+//         question: argentina,
+//         answer: {
+//             a: "Italy",
+//             b: "Argentina",
+//             c: "Peru",
+//             d: "Uruguay"
+//         },
+//         correctAnswer: "Argentina"
+//     },
 
-    {
-        question: ecuador,
-        answer: {
-            a: "Chile",
-            b: "Venezuela",
-            c: "Ecuador",
-            d: "Colombia"
-        },
-        correctAnswer: "Ecuador"
-    },
+//     {
+//         question: ecuador,
+//         answer: {
+//             a: "Chile",
+//             b: "Venezuela",
+//             c: "Ecuador",
+//             d: "Colombia"
+//         },
+//         correctAnswer: "Ecuador"
+//     },
 
-    {
-        question: chile,
-        answer: {
-            a: "Chile",
-            b: "Morocco",
-            c: "Cuba",
-            d: "Puerto Rico"
-        },
-        correctAnswer: "Chile"
-    },
+//     {
+//         question: chile,
+//         answer: {
+//             a: "Chile",
+//             b: "Morocco",
+//             c: "Cuba",
+//             d: "Puerto Rico"
+//         },
+//         correctAnswer: "Chile"
+//     },
 
-    {
-        question: colombia,
-        answer: {
-            a: "Ecuador",
-            b: "Colombia",
-            c: "France",
-            d: "Germany"
-        },
-        correctAnswer: "Colombia"
-    },
+//     {
+//         question: colombia,
+//         answer: {
+//             a: "Ecuador",
+//             b: "Colombia",
+//             c: "France",
+//             d: "Germany"
+//         },
+//         correctAnswer: "Colombia"
+//     },
 
-    {
-        question: peru,
-        answer: {
-            a: "Peru",
-            b: "Costa Rica",
-            c: "Cuba",
-            d: "Chile"
-        },
-        correctAnswer: "Peru"
-    },
+//     {
+//         question: peru,
+//         answer: {
+//             a: "Peru",
+//             b: "Costa Rica",
+//             c: "Cuba",
+//             d: "Chile"
+//         },
+//         correctAnswer: "Peru"
+//     },
 
-    {
-        question: guayana,
-        answer: {
-            a: "Bolivia",
-            b: "Congo",
-            c: "Suriname",
-            d: "Guayana"
-        },
-        correctAnswer: "Guayana"
-    },
+//     {
+//         question: guayana,
+//         answer: {
+//             a: "Bolivia",
+//             b: "Congo",
+//             c: "Suriname",
+//             d: "Guayana"
+//         },
+//         correctAnswer: "Guayana"
+//     },
 
-    {
-        question: paraguay,
-        answer: {
-            a: "Argentina",
-            b: "Mexico",
-            c: "Paraguay",
-            d: "Australia"
-        },
-        correctAnswer: "Paraguay"
-    },
+//     {
+//         question: paraguay,
+//         answer: {
+//             a: "Argentina",
+//             b: "Mexico",
+//             c: "Paraguay",
+//             d: "Australia"
+//         },
+//         correctAnswer: "Paraguay"
+//     },
 
-    {
-        question: suriname,
-        answer: {
-            a: "Belgium",
-            b: "Suriname",
-            c: "Norway",
-            d: "Iceland"
-        },
-        correctAnswer: "Suriname"
-    },
+//     {
+//         question: suriname,
+//         answer: {
+//             a: "Belgium",
+//             b: "Suriname",
+//             c: "Norway",
+//             d: "Iceland"
+//         },
+//         correctAnswer: "Suriname"
+//     },
 
-    {
-        question: uruguay,
-        answer: {
-            a: "Uruguay",
-            b: "Paraguay",
-            c: "Peru",
-            d: "Brazil"
-        },
-        correctAnswer: "Uruguay"
-    },
+//     {
+//         question: uruguay,
+//         answer: {
+//             a: "Uruguay",
+//             b: "Paraguay",
+//             c: "Peru",
+//             d: "Brazil"
+//         },
+//         correctAnswer: "Uruguay"
+//     },
 
-    {
-        question: venezuela,
-        answer: {
-            a: "Guayana",
-            b: "Ecuador",
-            c: "Colombia",
-            d: "Venezuela"
-        },
-        correctAnswer: "Venezuela"
-    },
-]
-// End of questions list
-
-//Will load random number between index 0 and index 11, so between the 12 questions
-
-function getQuestion() {
-    indexQuestion = getQuestionIndex()
-    
-    question = myQuestions[indexQuestion]
-    rightAnswer = question.correctAnswer
-
-    console.log(rightAnswer)
-    console.log(question)
-
-    flag = question.question
-    answer1 = question.answer.a
-    answer2 = question.answer.b
-    answer3 = question.answer.c
-    answer4 = question.answer.d
-
-    document.getElementById("answer1").innerHTML = answer1
-    document.getElementById("answer2").innerHTML = answer2
-    document.getElementById("answer3").innerHTML = answer3
-    document.getElementById("answer4").innerHTML = answer4
-    removeAllChildNodes(document.getElementById("game-question-flag"))
-    document.getElementById("game-question-flag").appendChild(flag)
-
-    let btns = document.querySelectorAll(".button");
-    btns.forEach(function(i) {
-        i.addEventListener('click', function() {
-            clickedAnswer = i.innerHTML
-            if (clickedAnswer == rightAnswer) {
-                this.style.backgroundColor = "green"
-                incrementScore()
-            } else {
-                this.style.backgroundColor = "red"
-            }
-            //Disable anymore clicks
-        });
-    });
-    
-    let next = document.getElementById("next-button")
-    next.addEventListener("click", getQuestion, getQuestionIndex)
-    // resetButtonColor = document.querySelectorAll(".button").style.backgroundColor = "white"
-    //when next is pressed, colors go back to default
-}
-
-function getQuestionIndex() {
-    let randomQuestion = Math.floor(Math.random() * myQuestions.length);
-    return randomQuestion
-}
-
-function removeAllChildNodes(parent) {
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-    }
-}
-function checkAnswer() {
-    console.log("Hello")
-}
-
-// function checkUserAnswerCorrect()
-
-function incrementScore() {
-    let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = ++oldScore;
-}
-
-// let currentScore = 0;
-
-// function userAnswer() {
-    
-// }
-
-// if(userAnswer === currentQuestion.correctAnswer){
-//     numCorrect++;
-//     answerContainers[questionNumber].style.color = 'lightgreen';
-//   }
-//   else{
-//     answerContainers[questionNumber].style.color = 'red';
-//   };
-
-//When answer is answered, show next button, add event listener to get next question ready
-
-
-//Create loop for to check when all questions are answered, will go to highscore page, collect number of answers answered correctly and display it at the end.
+//     {
+//         question: venezuela,
+//         answer: {
+//             a: "Guayana",
+//             b: "Ecuador",
+//             c: "Colombia",
+//             d: "Venezuela"
+//         },
+//         correctAnswer: "Venezuela"
+//     },
+// ]
+// // End of questions list
