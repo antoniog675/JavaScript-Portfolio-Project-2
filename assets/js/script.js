@@ -60,7 +60,7 @@ const myQuestions = [
             c: "Peru",
             d: "Lemon"
         },
-        correctAnswer: "a"
+        correctAnswer: "Brazil"
     },
 
     {
@@ -71,7 +71,7 @@ const myQuestions = [
             c: "England",
             d: "Bolivia"
         },
-        correctAnswer: "d"
+        correctAnswer: "Bolivia"
     },
 
     {
@@ -82,7 +82,7 @@ const myQuestions = [
             c: "Peru",
             d: "Uruguay"
         },
-        correctAnswer: "b"
+        correctAnswer: "Argentina"
     },
 
     {
@@ -93,18 +93,18 @@ const myQuestions = [
             c: "Ecuador",
             d: "Colombia"
         },
-        correctAnswer: "c"
+        correctAnswer: "Ecuador"
     },
 
     {
         question: chile,
         answer: {
-            a: "Chile  ",
+            a: "Chile",
             b: "Morocco",
             c: "Cuba",
             d: "Puerto Rico"
         },
-        correctAnswer: "a"
+        correctAnswer: "Chile"
     },
 
     {
@@ -115,7 +115,7 @@ const myQuestions = [
             c: "France",
             d: "Germany"
         },
-        correctAnswer: "b"
+        correctAnswer: "Colombia"
     },
 
     {
@@ -126,7 +126,7 @@ const myQuestions = [
             c: "Cuba",
             d: "Chile"
         },
-        correctAnswer: "a"
+        correctAnswer: "Peru"
     },
 
     {
@@ -137,7 +137,7 @@ const myQuestions = [
             c: "Suriname",
             d: "Guayana"
         },
-        correctAnswer: "d"
+        correctAnswer: "Guayana"
     },
 
     {
@@ -148,7 +148,7 @@ const myQuestions = [
             c: "Paraguay",
             d: "Australia"
         },
-        correctAnswer: "c"
+        correctAnswer: "Paraguay"
     },
 
     {
@@ -159,7 +159,7 @@ const myQuestions = [
             c: "Norway",
             d: "Iceland"
         },
-        correctAnswer: "b"
+        correctAnswer: "Suriname"
     },
 
     {
@@ -170,7 +170,7 @@ const myQuestions = [
             c: "Peru",
             d: "Brazil"
         },
-        correctAnswer: "a"
+        correctAnswer: "Uruguay"
     },
 
     {
@@ -181,7 +181,7 @@ const myQuestions = [
             c: "Colombia",
             d: "Venezuela"
         },
-        correctAnswer: "d"
+        correctAnswer: "Venezuela"
     },
 ]
 // End of questions list
@@ -191,9 +191,11 @@ const myQuestions = [
 document.addEventListener("DOMContentLoaded", getQuestion);
 
 function getQuestion() {
-    let randomQuestion = Math.floor(Math.random() * myQuestions.length);
-    question = myQuestions[randomQuestion]
-    
+    indexQuestion = getQuestionIndex()
+    question = myQuestions[indexQuestion]
+    rightAnswer = question.correctAnswer
+    console.log(rightAnswer)
+
     flag = question.question
     answer1 = question.answer.a
     answer2 = question.answer.b
@@ -206,11 +208,64 @@ function getQuestion() {
     document.getElementById("answer4").innerHTML = answer4
     removeAllChildNodes(document.getElementById("game-question-flag"))
     document.getElementById("game-question-flag").appendChild(flag)
+
+    let btns = document.querySelectorAll(".button");
+    btns.forEach(function(i) {
+        i.addEventListener('click', function() {
+            clickedAnswer = i.innerHTML
+            if (clickedAnswer == rightAnswer) {
+                i.style.backgroundColor = "green"
+            } else {
+                i.style.backgroundColor = "red"
+            }
+        });
+    });
+
+    // if(i.innerHTML == question) {
+    //     this.style.backgroundColor = "green";
+    // }
+    
+    //Add event listener for buttons, see if userAnswer matches the correctAnswer in the object() 
     
     let next = document.getElementById("next-button")
     next.addEventListener("click", getQuestion)
-    
+
 }
+
+function getQuestionIndex() {
+    let randomQuestion = Math.floor(Math.random() * myQuestions.length);
+    return randomQuestion
+}
+
+// function userAnswer() {
+//     if (button "click" == question.correctAnswer)style.background-color.green;
+//     else {
+//         Element.background-color.red;
+//     }
+
+// }
+
+// function getQuestion() {
+//     let randomQuestion = Math.floor(Math.random() * myQuestions.length);
+//     question = myQuestions[randomQuestion]
+    
+//     flag = question.question
+//     answer1 = question.answer.a
+//     answer2 = question.answer.b
+//     answer3 = question.answer.c
+//     answer4 = question.answer.d
+
+//     document.getElementById("answer1").innerHTML = answer1
+//     document.getElementById("answer2").innerHTML = answer2
+//     document.getElementById("answer3").innerHTML = answer3
+//     document.getElementById("answer4").innerHTML = answer4
+//     removeAllChildNodes(document.getElementById("game-question-flag"))
+//     document.getElementById("game-question-flag").appendChild(flag)
+    
+//     let next = document.getElementById("next-button")
+//     next.addEventListener("click", getQuestion)
+    
+// }
 
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
@@ -218,10 +273,18 @@ function removeAllChildNodes(parent) {
     }
 }
 
-// Need to append the value from the returned object, to the questions for user....
+document.getElementById("answer1").addEventListener("click", checkAnswer());
+document.getElementById("answer2").addEventListener("click", checkAnswer());
+document.getElementById("answer3").addEventListener("click", checkAnswer());
+document.getElementById("answer4").addEventListener("click", checkAnswer());
 
-//Next button working
+function checkAnswer() {
+    console.log("Hello")
+}
 
+// function checkUserAnswerCorrect()
+
+// function incrementScore()
 
 // let currentScore = 0;
 
