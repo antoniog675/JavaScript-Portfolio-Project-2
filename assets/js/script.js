@@ -130,7 +130,7 @@ function startTimer(time) {
                     option_list.children[i].setAttribute("class", "option correct")
                 }
             }
-            
+
             for (let i = 0; i < allOptions; i++) {
                 option_list.children[i].classList.add("disabled")
             }
@@ -203,46 +203,94 @@ const questions = [
             "Puerto Rico"
         ],
         correctAnswer: "Chile"
-    },]
+    },
+    {
+        num: 6,
+        question: "The capital city of this country is Bogata",
+        answer: [
+            "Ecuador",
+            "Colombia",
+            "France",
+            "Germany"
+        ],
+        correctAnswer: "Colombia"
+    },
+
+    {
+        num: 7,
+        question: "This country is home to Machu Picchu ",
+        answer: [
+            "Peru",
+            "Costa Rica",
+            "Cuba",
+            "Chile"
+        ],
+        correctAnswer: "Peru"
+    },
+
+    {
+        num: 8,
+        question: "This country sits between Venezuela and Suriname..",
+        answer: [
+            "Bolivia",
+            "Congo",
+            "Suriname",
+            "Guayana"
+        ],
+        correctAnswer: "Guayana"
+    },
+
+    {
+        num: 9,
+        question: "This country is a landlocked country between Argentina, Brazil and Bolivia",
+        answer: [
+            "Argentina",
+            "Mexico",
+            "Paraguay",
+            "Australia"
+        ],
+        correctAnswer: "Paraguay"
+    },
+
+    {
+        num: 10,
+        question: "This country was once know as Dutch Guiana and sits next to Guayana",
+        answer: [
+            "Belgium",
+            "Suriname",
+            "Norway",
+            "Iceland"
+        ],
+        correctAnswer: "Suriname"
+    },
+
+    {
+        num: 11,
+        question: "Football superstar Edison Cavani is from this country",
+        answer: [
+            "Uruguay",
+            "Paraguay",
+            "Peru",
+            "Brazil"
+        ],
+        correctAnswer: "Uruguay"
+    },
+
+    {
+        num: 12,
+        question: "The capital city of this country Caracas",
+        answer: [
+            "Guayana",
+            "Ecuador",
+            "Colombia",
+            "Venezuela"
+        ],
+        correctAnswer: "Venezuela"
+    },
+]
 
     document.addEventListener("DOMContentLoaded", showQuestion(0), questionsCounter(1), startTimer(15));
 // This will load the first question, will listen for the id "play-game" to be clicked, then first question will be loaded.
-
-var brazil = new Image(300,200); 
-brazil.src = "../assets/images/brazil-image.jpeg"
-
-var argentina = new Image(300,200); 
-argentina.src = "../assets/images/argentina-flag.jpeg"
-
-var ecuador = new Image(300,200); 
-ecuador.src = "../assets/images/ecuador.flag.jpeg"
-
-var bolivia = new Image(300,200); 
-bolivia.src = "../assets/images/Flag-Bolivia.jpeg"
-
-var chile = new Image(300,200); 
-chile.src = "../assets/images/Flag-Chile.jpeg"
-
-var colombia = new Image(300,200); 
-colombia.src = "../assets/images/Flag-Colombia.jpg"
-
-var peru = new Image(300,200); 
-peru.src = "../assets/images/Flag-Peru.jpeg"
-
-var guayana = new Image(300,200); 
-guayana.src = "../assets/images/guayana-flag.jpeg"
-
-var paraguay = new Image(300,200); 
-paraguay.src = "../assets/images/paraguay.jpeg"
-
-var suriname = new Image(300,200); 
-suriname.src = "../assets/images/suriname-flag.jpeg"
-
-var uruguay = new Image(300,200); 
-uruguay.src = "../assets/images/uruguay-flag.jpeg"
-
-var venezuela = new Image(300,200); 
-venezuela.src = "../assets/images/venezuela-flag.jpeg"
 
 // const myQuestions = [
 //     {
