@@ -22,11 +22,26 @@ let question_count = 0;
 let que_number = 1;
 let counter;
 let timeValue = 15;
+let userScore = 0;
+let userName = document.querySelector(".playerName")
 
 const next_button = document.querySelector(".next-button");
 const result_box = document.querySelector(".result-box")
+const inGameRestart = document.querySelector(".home-next-restart .restart-button")
 const restart_quiz = document.querySelector(".end-game-buttons .restart")
-const quit_game = document.querySelector("end-game-buttons .quit")
+const quit_game = document.querySelector(".end-game-buttons .quit")
+
+inGameRestart.onclick = () =>{
+    window.location.reload();
+}
+
+restart_quiz.onclick = () =>{
+    window.location.reload();
+}
+
+quit_game.onclick = () =>{
+    window.location = 'index.html'
+}
 
 //If next button clicked
 next_button.onclick = ()=>{
@@ -67,6 +82,8 @@ function optionSelected(answer) {
     let correctAns = questions[question_count].correctAnswer;
     let allOptions = option_list.children.length;
     if(userAns == correctAns) {
+        userScore += 1;
+        console.log(userScore)
         answer.classList.add("correct");
         console.log("answer is correct")
     } else {
@@ -91,7 +108,10 @@ function optionSelected(answer) {
 
 function showResultBox() {
     result_box.classList.add("activeResult");
-}
+    const scoreText = document.querySelector(".score-text");
+    let scoreTag = '<span>You scored<p>'+ userScore +'</p>out of<p>'+ questions.length+'</p></span>';
+    scoreText.innerHTML = scoreTag;
+    }   
 
 function startTimer(time) {
     counter = setInterval(timer, 1000);
@@ -101,6 +121,20 @@ function startTimer(time) {
         if(time < 0) {
             clearInterval(counter);
             timeCount.textContent = "0"
+
+            let correctAns = questions[question_count].correctAnswer;
+            let allOptions = option_list.children.length;
+
+            for (let i = 0; i < allOptions; i++) {
+                if(option_list.children[i].textContent == correctAns) {
+                    option_list.children[i].setAttribute("class", "option correct")
+                }
+            }
+            
+            for (let i = 0; i < allOptions; i++) {
+                option_list.children[i].classList.add("disabled")
+            }
+            next_button.style.display = "block";
         }
     } 
 }
