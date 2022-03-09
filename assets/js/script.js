@@ -24,19 +24,23 @@ let counter;
 let timeValue = 15;
 
 const next_button = document.querySelector(".next-button");
+const result_box = document.querySelector(".result-box")
+const restart_quiz = document.querySelector(".end-game-buttons .restart")
+const quit_game = document.querySelector("end-game-buttons .quit")
 
 //If next button clicked
 next_button.onclick = ()=>{
     if(question_count < questions.length - 1){
-    question_count++;
-    que_number++;
-    showQuestion(question_count);
-    questionsCounter(que_number);
-    clearInterval(counter);
-    startTimer(timeValue);
-    next_button.style.display = "none";
+        question_count++;
+        que_number++;
+        showQuestion(question_count);
+        questionsCounter(que_number);
+        clearInterval(counter);
+        startTimer(timeValue);
+        next_button.style.display = "none";
     } else {
-        console.log("Questions complete")
+        console.log("Questions complete");
+        showResultBox();
     }
 }
 //getting questions
@@ -83,6 +87,10 @@ function optionSelected(answer) {
         option_list.children[i].classList.add("disabled")
     }
     next_button.style.display = "block";
+}
+
+function showResultBox() {
+    result_box.classList.add("activeResult");
 }
 
 function startTimer(time) {
