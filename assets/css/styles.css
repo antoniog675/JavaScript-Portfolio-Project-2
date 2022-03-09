@@ -291,6 +291,9 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+    .container {
+        transform: scale(0.9);
+    }
     #rules-message-box{
         width: 70%;
     }
