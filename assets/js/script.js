@@ -15,10 +15,13 @@ function pop() {
 const exit_button = document.querySelector(".end-game-buttons .quit")
 const restart_button = document.querySelector(".end-game-buttons .restart")
 const quiz_box = document.querySelector(".cointainer2")
+const timeCount = document.querySelector(".timer-sec")
 
 const option_list = document.querySelector(".game-answers");
 let question_count = 0;
 let que_number = 1;
+let counter;
+let timeValue = 15;
 
 const next_button = document.querySelector(".next-button");
 
@@ -29,6 +32,9 @@ next_button.onclick = ()=>{
     que_number++;
     showQuestion(question_count);
     questionsCounter(que_number);
+    clearInterval(counter);
+    startTimer(timeValue);
+    next_button.style.display = "none";
     } else {
         console.log("Questions complete")
     }
@@ -52,6 +58,7 @@ function showQuestion(index) {
 }
 
 function optionSelected(answer) {
+    clearInterval(counter);
     let userAns = answer.textContent;
     let correctAns = questions[question_count].correctAnswer;
     let allOptions = option_list.children.length;
@@ -75,6 +82,19 @@ function optionSelected(answer) {
     for (let i = 0; i < allOptions; i++) {
         option_list.children[i].classList.add("disabled")
     }
+    next_button.style.display = "block";
+}
+
+function startTimer(time) {
+    counter = setInterval(timer, 1000);
+    function timer() {
+        timeCount.textContent = time;
+        time--;
+        if(time < 0) {
+            clearInterval(counter);
+            timeCount.textContent = "0"
+        }
+    } 
 }
 
 function questionsCounter(index) {
@@ -143,7 +163,7 @@ const questions = [
         correctAnswer: "Chile"
     },]
 
-    document.addEventListener("DOMContentLoaded", showQuestion(0), questionsCounter(1));
+    document.addEventListener("DOMContentLoaded", showQuestion(0), questionsCounter(1), startTimer(15));
 // This will load the first question, will listen for the id "play-game" to be clicked, then first question will be loaded.
 
 var brazil = new Image(300,200); 
