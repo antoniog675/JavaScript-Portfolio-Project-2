@@ -61,8 +61,16 @@ function optionSelected(answer) {
     } else {
         answer.classList.add("incorrect")
         console.log("answer is wrong")
+
+        // If the answer is incorrect then it will automatically show the correct answer
+        for (let i = 0; i < allOptions; i++) {
+        if(option_list.children[i].textContent == correctAns) {
+            option_list.children[i].setAttribute("class", "option correct")
+        }
     }
 
+    }
+    
     //Once user answer is returned, options will be disabled
     for (let i = 0; i < allOptions; i++) {
         option_list.children[i].classList.add("disabled")
