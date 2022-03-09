@@ -266,12 +266,15 @@ body {
     color: white;
 }
 
-@media only screen and (min-width: 1042px){
+@media only screen and (min-width: 1300px){
     .container {
         width: 60%;
         transform: scale(1.5);
         margin: 0 auto;
-        margin-top: 30vh;
+        margin-top: 25vh;
+}
+.container2 {
+    transform: scale(1.5);
 }
 }
 
