@@ -29,10 +29,10 @@ body {
 }
 
 .playerName{
-    text-align: center;
     border-radius: 10px;
     padding: 10px;
-    font-family: Nunito,Helvetica;
+    height: 20px;
+    background-color: white;
     border-style: none;
     
 }
@@ -88,6 +88,7 @@ body {
     background-color: rgba(226, 230, 5, 0.4);
     border-radius: 10px;
     padding: 5px;
+    align-items: baseline;
 }
 
 .game-question-answers  {
@@ -95,13 +96,6 @@ body {
     text-align: center;
 }
 
-.game-question-answers p {
-    background-color: rgba(226, 230, 5, 0.4);
-    border-radius: 10px;
-    padding: 5px;
-    font-family: Nunito;
-    margin: 10px;
-}
 .game-answers {
     display: flex;
     flex-direction: column;
@@ -110,7 +104,10 @@ body {
 
 #game-question-flag {
     margin: 10px 0 20px 0;
+    font-family: Smooch Sans;
+    font-size: 2em;
 }
+
 
 .game-question-answers .game-answers .option {
     background-color: white;
@@ -232,7 +229,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(33, 223, 33);
+    background-color: blue;
     padding: 10px;
     text-align: center;
     border-radius: 10px;
@@ -240,8 +237,9 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 1.5em;
-    border-style: double;
+    border-style: solid;
     opacity: 0;
+    font-family: Smooch Sans;
 }
 
 .result-box .complete-text{
@@ -249,7 +247,7 @@ body {
 }
 
 .result-box.activeResult{
-    z-index: 5;
+    z-index: 15;
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
@@ -268,7 +266,28 @@ body {
     color: white;
 }
 
+@media only screen and (max-width: 1042px){
+    .user-assist-features, .home-next-restart {
+        width: 50%;
+    }
+}
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 690px){
+    .user-assist-features, .home-next-restart {
+        width: 65%;
+    }
+}
 
+@media only screen and (max-width: 500px) {
+    #rules-message-box{
+        width: 70%;
+    }
+
+    .user-assist-features, .home-next-restart  {
+        width: 100%;
+    }
+
+    .result-box {
+        width: 75%;
+    }
 }
