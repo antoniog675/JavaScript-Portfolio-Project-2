@@ -72,9 +72,20 @@
 ![Results box with number of correct answers users scored on mobile device](assets/images/results-box-mobile.jpg)
 
 ## Wireframes 
+
+<li>So for my game my initial design was for it to guess the country by the flag, but as I got on with the project it was just difficult to have my idea blossom, I ran into so many obstacles with finding a way to implement the image when the question was called out at random from the array 'questions'.</li>
+<li>So I went for a basic quiz question game.</li>
+<li>But, even though it doesnt meet my inital wireframe design my game was still inspired by the wireframe, I still have the hidden Bolivian Flag, my game has a timer, instead of keeping track of the score my game keeps track of the question they are on. Unfortunatly I had to bin the 'hint' button, the sound toggling, and the highscore section.</li>
+
+<li>But, I still have a home button, the next question button after user answers, and a restart button</li>
+
+
 <img src="assets/images/home-screen-phone.jpeg" height="400" width="200"/>
+
 ![User assist bar](assets/images/users-assist-bar.png)
+
 <img src="assets/images/game-section-correct.jpeg" height="400" width="400"/> <img src="assets/images/game-section-incorrect.jpeg" height="400" width="400"/>
+
 ![home-restart-next](assets/images/home-restart-next.jpeg)
 
 
@@ -86,7 +97,6 @@
     <p>The fonts that will be used for this project are 'Smooch Sans' and 'Fredoka'</p>
     <li>Colors</li>
     <p>The main color for the game used was yellow (#DECC2A), the title will be in a red container and the 'Play Game' Button is in green container. The main page has a hidden flag within it and these are the colors of Bolivia.</p>
-    <li>Wireframe</li>
 </ul>
 
 ## Technolgies Used
@@ -97,20 +107,68 @@
     <li>JavaScript</li>
 </ul>
 
-## Testing
-<hr>
+# Testing
 
-<h1>Browser Compatability</h1>
+<h3>Browser Compatability</h3>
 <ul>Testing done on these search engines, website opened as it should and executed all questions and features without issues
     <li>Chrome</li>
     <li>Safari</li>
     <li>Internet Explorer</li>
 </ul>
-<ul>
-    <li></li>
-    <li></li>
+
+## Code Validation
+<h3>To test my project I used W3C HTML Validator, W3C CSS Validator and JSHint Validator, between the index.html and game.html there were 4 errors found, the CSS had a few mistake as well with e.g. 'border: solid red;' and the validator said I had to write this differently, 'border: solid; border-color: red;' this was solved but apart from that, no errors. With JSHint I got several errors regarding "	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)."
+</h3>
+
+<li>W3C HTML Validator</li>
+
+![Image showing that my HTML has no errors](assets/images/html-validator.jpg)
+
+<li>W3C CSS Validator</li>
+
+![Image showing that there are no errors in my css](assets/images/css-validator.jpg)
+
+<li>JSHint</li>
+
+![](assets/images/js-warnings-validator.jpg)
+
+<h2>Lighthouse Testing</h2>
+
+<li>I tested my website using the lighthouse function on Google</li>
+<li>These are the results I got</li>
+
+<li>This image is showing the results of the home page of the game</li>
+
+![This image is showing the results of the home page of the game](assets/images/lighthouse.jpg)
+
+<li>This image is showing the results of the lighthouse testing of the questions area on a desktop</li>
+
+![](assets/images/game-page-desktop-LH.jpg)
+
+<li>This final image is showing the lighthouse results for the questions area on a mobile</li>
+
+![](assets/images/game-page-mobile-LH.jpg)
+
+<h3>These are the lighthouse results using Microsoft edge</h3>
+
+![Image of lighthouse reults for Microsoft Edge, home page](assets/images/IE-lighthouse-desktop.jpg)
+
+![Image of lighthouse reults for Microsoft Edge, game page](assets/images/IE-lighthouse-desktop-game.jpg)
+
+![Image of lighthouse reults for Microsoft Edge, home page on a mobile screen](assets/images/IE-lighoutse-mobile-home.jpg)
+
+![Image of lighthouse reults for Microsoft Edge, game page on aa mobile screen](assets/images/IE-lighoutse-mobile-game.jpg)
+
+
+
+<ul>Bugs
     <li>Resolved bugs</li>
+    <li>One of the bugs I got was the console error.favicon, after searching what the problem was it was easy to fix, the website now has a favicon and the error has gone away
     <li>Unresolved bugs</li>
+    <li>I have this on my console when I load the index.html, but when I load the game up the console error dissapears and the code is fine....</li>
+
+   ![Unsolved bug](assets/images/unsolvedd-bugs.jpg)
+
 </ul>
 
 ## Deployment
@@ -123,9 +181,9 @@
 
 ## Credits
 <hr>
-<ul>
-    <li></li>
-    <li></li>
+<ul>Content
+    <li>Font taken from Google Fonts</li>
+    <li>Icons used from Font Awesome [Font Awesome]https://fontawesome.com/);</li>
     <li></li>
 </ul>
 

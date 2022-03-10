@@ -314,7 +314,7 @@ a {
     }
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1000px){
     .user-assist-features, .home-next-restart {
         width: 65%;
     }
