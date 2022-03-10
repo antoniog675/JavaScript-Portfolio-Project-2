@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Smooch+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Smooch+Sans:wght@600&display=swap');
 
 body {
     background-color: #DECC2A;
@@ -89,6 +89,7 @@ body {
     border-radius: 10px;
     padding: 5px;
     align-items: baseline;
+    font-family: Fredoka;
 }
 
 .game-question-answers  {
@@ -100,6 +101,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family: Fredoka;
 }
 
 #game-question-flag {
@@ -167,6 +169,7 @@ body {
     border-radius: 10px;
     padding: 5px 10px;
     display: none;
+    font-family: Smooch Sans;
 }
 
 #restart-button:hover {
@@ -193,9 +196,22 @@ body {
 }
 .rules ul {
     text-align: left;
-    font-family: Nunito;
+    font-family: Fredoka;
  }
 
+.rules-close-button {
+    color: black;
+    background-color: white;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: Fredoka;
+}
+
+.rules-close-button:hover {
+    background-color: black;
+    color: white;
+}
  /* Style for results box, end of game*/
 
 .timer {
@@ -204,10 +220,11 @@ body {
     justify-content: space-between;
     width: 145px;
     height: 20px;
-    background-color: rgb(243, 181, 65);
+    background-color: rgb(65 164 243);
     border: 1px solid;
     padding: 5px;
     border-radius: 5px;
+    border: solid 2px;
 }
 
 .timer .time-text {
@@ -216,7 +233,7 @@ body {
 
 .timer .timer-sec {
     font-weight: 500;
-    background-color: green;
+    background-color: rgb(65 164 243);
     border-radius: 10px;
     width: 45px;
     text-align: center;
@@ -229,7 +246,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: blue;
+    background-color: #0023DB;
     padding: 10px;
     text-align: center;
     border-radius: 10px;
@@ -237,9 +254,10 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 1.5em;
-    border-style: solid;
+    border-style: solid #0023DB;
     opacity: 0;
     font-family: Smooch Sans;
+    color: #fdfd77;
 }
 
 .result-box .complete-text{
@@ -259,6 +277,7 @@ body {
     font-size: 18px;
     padding: 5px;
     border-radius: 10px;
+    font-family: Fredoka;
 }
 
 .end-game-buttons button:hover {
@@ -293,6 +312,7 @@ body {
 @media only screen and (max-width: 500px) {
     .container {
         transform: scale(0.9);
+        margin-top: 7vh;
     }
     #rules-message-box{
         width: 70%;
