@@ -175,9 +175,10 @@ a {
     padding: 5px 10px;
     display: none;
     font-family: Smooch Sans;
+    cursor: pointer;
 }
 
-#restart-button:hover {
+.restart-button:hover {
     cursor: pointer;
 }
 
@@ -289,6 +290,7 @@ a {
 .end-game-buttons button:hover {
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 /*Responsive design for screen sizes*/

@@ -1,46 +1,83 @@
-# Flags Of South America
+# Countries Of South America
 
-Flags of South America will test people's knowledge on countries of South America. In the game there are 12 points to collect, 12 countries in South America, and you will earn these points by getting the answers right. When you start playing the game a flag will appear that you will have to guess, if you get the answer right, you will earn a point and will be able to move on to the next question, the goal is to get as many points as you can. There will be a timer, so users can test themselves by seeing who can finish the game the quickest with the highest points.
+'Countries of South America' will test people's knowledge on countries of South America. In the game there are 12 points to collect, 12 countries in South America, and you will earn these points by getting the answers right. As soon as you start playing the game a quesition that relates to the answer/country will appear, you have to guess which country we are describing or asking you about. If you get the answer right, you will earn a point and will be able to move on to the next question, the goal is to get as many points as you can. There will be a timer, so users can test themselves by seeing who can finish the game the quickest with the highest points.
+
+![Am I responsive picture](assets/images/amiresponsive-country-game.jpeg)
 
 ## Objective
-This site is targeted to people who love to test their knowledge, have an interest in geography and especially those who have an interest in the South American countries.
+<li>This site is targeted to people who love to test their knowledge, have an interest in geography and especially those who have an interest in the South American countries.</li>
 
-You can view the live link here - "add website link here when completed"
-
-"Input Am I responsive picture of the game"
+<li>You can view the live link here - "add website link here when completed"</li>
 
 ## Features
 <hr>
 
 ### <u>Home page</u>
+<ul>
+<li>In this page you have the name of the game in red, this will instantly give the user an idea of what the game is about. There will be an input where users can enter their names to be able to play the game and record there scores,  there will be a 'Play Game' button to be able to start the game.</li> 
+<li>Below these features there will be a 'Rules of The Game', if you press on this button a box with the rules will appear on the screen, this will contain the rules and explain to users how the game works, how earn points and how to complete the game, and if they want, they can also quit or restart the game.<li>
 
-In this page you have the name of the game in red, this will instantly give the user an idea of what the game is about. There will be an input where users can enter their names to be able to play the game and record there scores,  there will be a 'Play Game' button to be able to start the game. 
-Below these features there will be a 'Rules of The Game' where users will be able to navigate to the rules section. They will be able to see how they will earn points, the different types of features that will be within the game, for instance the 30 second timer, there will be a sound toggle button where users can have a game with sound or no sound at all. This area will tell them exactly what these features will do.
-The next feature is the highscore button, this button will take users to see all the highscores within the game, users need to play in order to build highscores, the first time they select the button there will be no content.
-
-<img src="assets/images/home-screen-phone.jpeg" height="400" width="200"/>
-
+![Home page appearance on a laptop](assets/images/laptop-main-page.jpg)
+![Home page appearance on a mobile](assets/images/home-page-mobile.jpg)
 
 ### <u>Within the Game</u>
 
-In this area there will be a score counter, a timer and a hints section. The score will keep track of how many correct answer the user has got, each correct answer will cause the score to increment by one.
+<li>In this area the game will keep track of what question the user is on, there will be a timer that will make it feel like quiz, this will add more pressure to the game, it is going to be a 15 second timer, when the timer hits 0 the correct answer will be revealed, options will be disabled and user will have to move on to the next question.</li>
 
-The timer will be there to make it feel like and actual quiz game, add more pressure to the game, it is going to be a 30 second timer and at the end of the game it will tell the users exactly how long it took them to complete the game. Users can challange themselves and try and beat their previous score AND time.
+![](assets/images/question-timer.jpg)
 
-The third feature in this little assist bar will be the hints button, this will provide a small hint to be able to point users to the correct answer, for example, if the answer was Argentina, a hint will be related to Lionel Messi, and hopefully these lil hints can point users to the correct answer.
+<li>In this area there is going to be the question AND the options that users will be able to select from, users will have to read the question and guess which country they are being asked about or which country is being described.</li>
+<li>Users can hover over the question, the cursor will become a pointer on the options they can select, the color of he boxes will also change.</li>
 
+![Questions and options](assets/images/question-area-laptop.jpg)
+
+
+<li>After users select their answer, the options will be disabled and they can only select  home, restart or the next question. Pointer will get disabled.</li> 
+<li>If the user select the correct answer then their option will turn green, next button will appear</li>
+
+![Users option turns green](assets/images/select-correct-answer.jpg)
+
+
+<li>This is the mobile verison of the game, when answer is correct it turns green, will act the same as on the laptop</li>
+
+![QUestions and options of the game on a mbile screen](assets/images/game-mobile-version.jpg)
+
+<li>If users select the wrong answer then their answer will turn red, and the correct answer will appear green</li>
+
+![User option turns red when wrong and corret answer turns green](assets/images/wrong-answer-laptop.jpg)
+
+<li>If user does not manage to beat the time then options will get disabled and correct answer will turn green</li>
+
+![Correct answer turns green automatically when user cannot answer withing 15 secons](assets/images/time-run-out-laptop.jpg)
+
+
+<li>In this part of the game there will be a Home button, a next question button and the Restart button.</li>
+<li>The home button feature will be there incase the user wants to quit the game or to look at the rules again</li>
+<li>The 'next' question button will only appear after the user has selected an answer, they won't be able to skip the question, this button will move on to the next question.</li>
+<li>The restart feature will restart the game from question one, this will not take the user to the home screen
+</ul>
+
+![Here will a nav bar with a home button, next button and restart button](assets/images/home-next-retart-bar-laptop.jpg)
+
+<li>After question is selected next button will appear</li>
+
+![Here will a nav bar with a home button, next button and restart button](assets/images/home-next-retart-bar-laptop2.jpg)
+
+<li>When all question have been answered a results box will appear on top of the questions with how many correct answers you got, and then two buttons at the bottom, one to go to the home page or to restart the game and play the game again</li>
+
+![Results box with number of correct answers users scored](assets/images/results-box-end-game.jpg)
+
+<li>This is how the results will appear on a mobile device</li>
+
+![Results box with number of correct answers users scored on mobile device](assets/images/results-box-mobile.jpg)
+
+## Wireframes 
+<img src="assets/images/home-screen-phone.jpeg" height="400" width="200"/>
 ![User assist bar](assets/images/users-assist-bar.png)
-
-In this area of the game a random flag will be generated out of the 12 countries within South America, and 4 answers will also be outputed, only one will be the answer. When users select the correct answer the score will update by one, the users answer will turn green and a 'Next' button to move on to the next question will appear. If users get the answer wrong then THEIR answer will turn red and the correct answer will appear green. The 'Next'  button will appear.
-
 <img src="assets/images/game-section-correct.jpeg" height="400" width="400"/> <img src="assets/images/game-section-incorrect.jpeg" height="400" width="400"/>
-
-In this part of the game there will be a Home button, a next question button and the Restart button.
-The home button feature will be there incase the user wants to quit, change their name, check the rules again, look at highscores to beat or to toggle the sound of the game.
-The next question button will only appear after the user has selected an answer, they won't be able to skip the question, this button will move on to the next question.
-The restart feature will restart the game from question one, this will not take the user to the home screen
-
 ![home-restart-next](assets/images/home-restart-next.jpeg)
+
+
 
 ## Design 
 <hr>
@@ -62,6 +99,13 @@ The restart feature will restart the game from question one, this will not take 
 
 ## Testing
 <hr>
+
+<h1>Browser Compatability</h1>
+<ul>Testing done on these search engines, website opened as it should and executed all questions and features without issues
+    <li>Chrome</li>
+    <li>Safari</li>
+    <li>Internet Explorer</li>
+</ul>
 <ul>
     <li></li>
     <li></li>
