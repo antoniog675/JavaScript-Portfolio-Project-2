@@ -46,7 +46,7 @@ The restart feature will restart the game from question one, this will not take 
 <hr>
 <ul>
     <li>Fonts</li>
-    <p>The fonts that will be used for this project are 'Smooch Sans' and 'Nunito'</p>
+    <p>The fonts that will be used for this project are 'Smooch Sans' and 'Fredoka'</p>
     <li>Colors</li>
     <p>The main color for the game used was yellow (#DECC2A), the title will be in a red container and the 'Play Game' Button is in green container. The main page has a hidden flag within it and these are the colors of Bolivia.</p>
     <li>Wireframe</li>
