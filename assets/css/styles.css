@@ -238,11 +238,11 @@ a {
 
 .timer .timer-sec {
     font-weight: 500;
-    background-color: rgb(65 164 243);
+    background-color: white;
     border-radius: 10px;
     width: 45px;
     text-align: center;
-    color: white;
+    color: black;
 
 }
 
