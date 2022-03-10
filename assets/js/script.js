@@ -12,10 +12,10 @@ function pop() {
 }
 
 // Main JS
-const exit_button = document.querySelector(".end-game-buttons .quit")
-const restart_button = document.querySelector(".end-game-buttons .restart")
-const quiz_box = document.querySelector(".cointainer2")
-const timeCount = document.querySelector(".timer-sec")
+const exit_button = document.querySelector(".end-game-buttons .quit");
+const restart_button = document.querySelector(".end-game-buttons .restart");
+const quiz_box = document.querySelector(".cointainer2");
+const timeCount = document.querySelector(".timer-sec");
 
 const option_list = document.querySelector(".game-answers");
 let question_count = 0;
@@ -23,27 +23,27 @@ let que_number = 1;
 let counter;
 let timeValue = 15;
 let userScore = 0;
-let userName = document.querySelector(".playerName")
+let userName = document.querySelector(".playerName");
 
 const next_button = document.querySelector(".next-button");
-const result_box = document.querySelector(".result-box")
-const inGameRestart = document.querySelector(".home-next-restart .restart-button")
-const restart_quiz = document.querySelector(".end-game-buttons .restart")
-const quit_game = document.querySelector(".end-game-buttons .quit")
+const result_box = document.querySelector(".result-box");
+const inGameRestart = document.querySelector(".home-next-restart .restart-button");
+const restart_quiz = document.querySelector(".end-game-buttons .restart");
+const quit_game = document.querySelector(".end-game-buttons .quit");
 
 inGameRestart.onclick = () =>{
     window.location.reload();
-}
+};
 
 restart_quiz.onclick = () =>{
     window.location.reload();
-}
+};
 
 quit_game.onclick = () =>{
-    window.location = 'index.html'
-}
+    window.location = 'index.html';
+};
 
-//If next button clicked
+//When next button is pressed it will iterate through the length of the questions.
 next_button.onclick = ()=>{
     if(question_count < questions.length - 1){
         question_count++;
@@ -57,12 +57,11 @@ next_button.onclick = ()=>{
         console.log("Questions complete");
         showResultBox();
     }
-}
-//getting questions
+};
 
+//This section will get the questions from 'questions and change the innerHTML of the question and available options
 function showQuestion(index) {
     const que_text = document.querySelector("#game-question-flag");
-    // const option_list = document.querySelector(".game-answers");
     let que_tag = '<span>'+ questions[index].num + '. '+ questions[index].question +'</span>';
     let option_tag = '<div class="option">'+ questions[index].answer[0] +'<span></span></div>'
                     + '<div class="option">'+ questions[index].answer[1] +'<span></span></div>'
@@ -72,10 +71,11 @@ function showQuestion(index) {
     option_list.innerHTML = option_tag;
     const option = option_list.querySelectorAll(".option");
     for (let i = 0; i < option.length; i++) {
-        option[i].setAttribute("onclick", "optionSelected(this)")
+        option[i].setAttribute("onclick", "optionSelected(this)");
     }
 }
 
+//To compare the users option agaisnt the correct answer
 function optionSelected(answer) {
     clearInterval(counter);
     let userAns = answer.textContent;
@@ -83,17 +83,17 @@ function optionSelected(answer) {
     let allOptions = option_list.children.length;
     if(userAns == correctAns) {
         userScore += 1;
-        console.log(userScore)
+        console.log(userScore); //To help with debugging
         answer.classList.add("correct");
-        console.log("answer is correct")
+        console.log("answer is correct");  //To help with debugging
     } else {
-        answer.classList.add("incorrect")
-        console.log("answer is wrong")
+        answer.classList.add("incorrect");
+        console.log("answer is wrong");
 
         // If the answer is incorrect then it will automatically show the correct answer
         for (let i = 0; i < allOptions; i++) {
         if(option_list.children[i].textContent == correctAns) {
-            option_list.children[i].setAttribute("class", "option correct")
+            option_list.children[i].setAttribute("class", "option correct");
         }
     }
 
@@ -101,17 +101,20 @@ function optionSelected(answer) {
     
     //Once user answer is returned, options will be disabled
     for (let i = 0; i < allOptions; i++) {
-        option_list.children[i].classList.add("disabled")
+        option_list.children[i].classList.add("disabled");
     }
     next_button.style.display = "block";
 }
 
+//Once game is completed this function will count all the answers the user got correct, tally them and give them a result out of 12
 function showResultBox() {
     result_box.classList.add("activeResult");
     const scoreText = document.querySelector(".score-text");
     let scoreTag = '<span>You scored<p>'+ userScore +'</p>out of<p>'+ questions.length+'</p></span>';
     scoreText.innerHTML = scoreTag;
     }   
+
+//This function is to set the time, to count down from 15, and if users do not manage to answer the question it will reveal the answer, disable options and set next button ready for the next question
 
 function startTimer(time) {
     counter = setInterval(timer, 1000);
@@ -120,35 +123,36 @@ function startTimer(time) {
         time--;
         if(time < 0) {
             clearInterval(counter);
-            timeCount.textContent = "0"
+            timeCount.textContent = "0";
 
             let correctAns = questions[question_count].correctAnswer;
             let allOptions = option_list.children.length;
 
             for (let i = 0; i < allOptions; i++) {
                 if(option_list.children[i].textContent == correctAns) {
-                    option_list.children[i].setAttribute("class", "option correct")
+                    option_list.children[i].setAttribute("class", "option correct");
                 }
             }
 
             for (let i = 0; i < allOptions; i++) {
-                option_list.children[i].classList.add("disabled")
+                option_list.children[i].classList.add("disabled");
             }
             next_button.style.display = "block";
         }
     } 
 }
 
+//This function counts as users go through the questions, if on question 7, it will tell them question 7, if question 2 it will say question 2/12 etc
 function questionsCounter(index) {
     const question_counter = document.querySelector(".total-que");
     let totalQuestionCount = '<span><p>'+ index +'</p>Of<p>'+ questions.length +'</p>Questions</span>';
     question_counter.innerHTML = totalQuestionCount;
 }
-
+//Questions array
 const questions = [
     {
         num: 1,
-        question: "Where is Rio de janiero located",
+        question: "Which country is Rio de Janiero located in?",
         answer: [
             "Brazil",
             "Nigeria",
@@ -287,142 +291,7 @@ const questions = [
         ],
         correctAnswer: "Venezuela"
     },
-]
+];
 
-    document.addEventListener("DOMContentLoaded", showQuestion(0), questionsCounter(1), startTimer(15));
-// This will load the first question, will listen for the id "play-game" to be clicked, then first question will be loaded.
-
-// const myQuestions = [
-//     {
-//         question: brazil,
-//         answer: {
-//             a: "Brazil",
-//             b: "Nigeria",
-//             c: "Peru",
-//             d: "Lemon"
-//         },
-//         correctAnswer: "Brazil"
-//     },
-
-//     {
-//         question: bolivia,
-//         answer: {
-//             a: "Colombia",
-//             b: "Guayana",
-//             c: "England",
-//             d: "Bolivia"
-//         },
-//         correctAnswer: "Bolivia"
-//     },
-
-//     {
-//         question: argentina,
-//         answer: {
-//             a: "Italy",
-//             b: "Argentina",
-//             c: "Peru",
-//             d: "Uruguay"
-//         },
-//         correctAnswer: "Argentina"
-//     },
-
-//     {
-//         question: ecuador,
-//         answer: {
-//             a: "Chile",
-//             b: "Venezuela",
-//             c: "Ecuador",
-//             d: "Colombia"
-//         },
-//         correctAnswer: "Ecuador"
-//     },
-
-//     {
-//         question: chile,
-//         answer: {
-//             a: "Chile",
-//             b: "Morocco",
-//             c: "Cuba",
-//             d: "Puerto Rico"
-//         },
-//         correctAnswer: "Chile"
-//     },
-
-//     {
-//         question: colombia,
-//         answer: {
-//             a: "Ecuador",
-//             b: "Colombia",
-//             c: "France",
-//             d: "Germany"
-//         },
-//         correctAnswer: "Colombia"
-//     },
-
-//     {
-//         question: peru,
-//         answer: {
-//             a: "Peru",
-//             b: "Costa Rica",
-//             c: "Cuba",
-//             d: "Chile"
-//         },
-//         correctAnswer: "Peru"
-//     },
-
-//     {
-//         question: guayana,
-//         answer: {
-//             a: "Bolivia",
-//             b: "Congo",
-//             c: "Suriname",
-//             d: "Guayana"
-//         },
-//         correctAnswer: "Guayana"
-//     },
-
-//     {
-//         question: paraguay,
-//         answer: {
-//             a: "Argentina",
-//             b: "Mexico",
-//             c: "Paraguay",
-//             d: "Australia"
-//         },
-//         correctAnswer: "Paraguay"
-//     },
-
-//     {
-//         question: suriname,
-//         answer: {
-//             a: "Belgium",
-//             b: "Suriname",
-//             c: "Norway",
-//             d: "Iceland"
-//         },
-//         correctAnswer: "Suriname"
-//     },
-
-//     {
-//         question: uruguay,
-//         answer: {
-//             a: "Uruguay",
-//             b: "Paraguay",
-//             c: "Peru",
-//             d: "Brazil"
-//         },
-//         correctAnswer: "Uruguay"
-//     },
-
-//     {
-//         question: venezuela,
-//         answer: {
-//             a: "Guayana",
-//             b: "Ecuador",
-//             c: "Colombia",
-//             d: "Venezuela"
-//         },
-//         correctAnswer: "Venezuela"
-//     },
-// ]
-// // End of questions list
+//Will load game only if document is loaded, will start functions showQuestion(), questionCounter() and startTimer() only when DOM is loaded
+document.addEventListener("DOMContentLoaded", showQuestion(0), questionsCounter(1), startTimer(15));
