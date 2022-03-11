@@ -1,13 +1,14 @@
-# Countries Of South America
+# Countries Of South America 
 
 'Countries of South America' will test people's knowledge on countries of South America. In the game there are 12 points to collect, 12 countries in South America, and you will earn these points by getting the answers right. As soon as players start playing the game a quesition that relates to the answer/country will appear, they have to guess which country we are describing or asking them about. If they get the answer right, the player will earn a point and will be able to move on to the next question, the goal is to get as many points as you can. There will be a timer, this adds pressure to the game. If the timer runs out, the question will be answered automatically and users will not be able to select an option.
 
+
 ![Am I responsive picture](assets/images/amiresponsive-country-game.jpeg)
 
-# Features
+# Features -
 
 
-## Home page
+## Home page -
 <hr>
 <ul>
 <li>In this page you have the title of the game in red, this will instantly give the user an idea of what the game is about. 
@@ -29,9 +30,11 @@ The'Play Game' will launch the game, laod the question and set the timer.</li>
 
 <hr>
 
-## Within the Game
+## Within the Game - 
 
-<li>In this area the game will keep track of what question the user is on, there will be a timer that will make it feel like quiz, this will add more pressure to the game, it is going to be a 15 second timer, when the timer hits 0 the correct answer will be revealed, options will be disabled and user will have to move on to the next question.</li>
+<hr>
+
+<li>In this area of the game, it will keep track of what question the user is on, there will be a timer that will make it feel like quiz, this will add more pressure to the game, it is going to be a 15 second timer, when the timer hits 0 the correct answer will be revealed, options will be disabled and user will have to move on to the next question.</li>
 
 ![](assets/images/question-timer.jpg)
 
@@ -51,11 +54,13 @@ The'Play Game' will launch the game, laod the question and set the timer.</li>
 
 ![QUestions and options of the game on a mbile screen](assets/images/game-mobile-version.jpg)
 
-<li>If users select the wrong answer then their answer will turn red, and the correct answer will appear green</li>
+<li>If users select the wrong answer then their answer will turn red, and the correct answer will appear green, the mobile version will also behave the same</li>
 
 ![User option turns red when wrong and corret answer turns green](assets/images/wrong-answer-laptop.jpg)
 
-<li>If user does not manage to beat the time then options will get disabled and correct answer will turn green</li>
+![User option turns red when wrong and corret answer turns green](assets/images/wrong-answer-laptop-mobile.jpg)
+
+<li>If user does not manage to beat the time then options will get disabled and correct answer will turn green, as you will be able to see, the timer is on 0 and the answer has been revealed</li>
 
 ![Correct answer turns green automatically when user cannot answer withing 15 secons](assets/images/time-run-out-laptop.jpg)
 
@@ -103,7 +108,7 @@ The'Play Game' will launch the game, laod the question and set the timer.</li>
 </details>
 
 
-## Design 
+## Design -
 <hr>
 <ul>
     <li><h2>Fonts</li></h2>
@@ -115,23 +120,20 @@ The'Play Game' will launch the game, laod the question and set the timer.</li>
     <p>Colors for buttons will invert when user hovers over them, this will add  interactivity and let users know that it is a button and that it can be pressed.</p>
 </ul>
 
-## Technolgies Used
+## Technolgies Used -
 <hr>
-<ul> Languages used
-    <li>HTML5</li>
-    <li>CSS3</li>
-    <li>JavaScript</li>
+<ul><h3>
+    <li>HTML5 - Provides the content and structure for the website.</li>
+    <li>CSS3 - Provides the styling for the website.</li>
+    <li>JavaScript - Provides the functionality of the website.</li>
+    <li>Google Chrome DevTools- Used to test responsiveness and debug</li>
+    <li>Github - Used to host and deploy the website.</li>
+    <li>ProtoPie - Used to create my wireframe</li>
+    <li> Favicon - Used to create the favicon.</li>
+    </h3>
 </ul>
 
-<ul>
-    <li>Google Fonts</li>
-    <li>Font Awesome</li>
-    <li>Github</li>
-    <li>Gitpod</li>
-    <li>ProtoPie</li>
-</ul>
-
-# Testing
+# Testing - 
 
 <h3>Browser Compatability</h3>
 <ul>Testing done on these search engines, website opened as it should and executed all questions and features without issues
@@ -154,7 +156,7 @@ The'Play Game' will launch the game, laod the question and set the timer.</li>
 
 ![Image showing that there are no errors in my css](assets/images/css-validator.jpg)
 
-<li>JSHint</li>
+<li>JSHint - For the script I had several warnings but these were because of semi colons on my work, the next set of warnings are asking me to update my version of JS and use ES6. </li>
 
 ![](assets/images/js-warnings-validator.jpg)
 
@@ -183,9 +185,12 @@ The'Play Game' will launch the game, laod the question and set the timer.</li>
 <summary><h2>Lighthouse results using Microsoft edge</h2></summary>
 <hr>
 
+<h3>Desktop Testing</h3>
 ![Image of lighthouse reults for Microsoft Edge, home page](assets/images/IE-lighthouse-desktop.jpg)
 
 ![Image of lighthouse reults for Microsoft Edge, game page](assets/images/IE-lighthouse-desktop-game.jpg)
+
+<h3>Mobile Testing</h3>
 
 ![Image of lighthouse reults for Microsoft Edge, home page on a mobile screen](assets/images/IE-lighoutse-mobile-home.jpg)
 
@@ -198,10 +203,10 @@ The'Play Game' will launch the game, laod the question and set the timer.</li>
 <details>
     <summary><h2>Debugging</h2></summary>
     <ul>
-    <li>Resolved bugs</li>
-    <li>One of the bugs I got was the console error.favicon, after searching what the problem was it was easy to fix, the website now has a favicon and the error has gone away
-    <li>Unresolved bugs</li>
-    <li>I have this on my console when I load the index.html, but when I load the game up the console error dissapears and the code is fine....</li>
+        <h2>Resolved bugs</h2>
+        <li>One of the bugs I got was the console error.favicon, after searching what the problem was it was easy to fix, the website now has a favicon and the error has gone away
+        <h2>Unresolved bugs</h2>
+        <li>I have this on my console when I load the index.html, but when I load the game up the console error dissapears and the code is fine....</li>
     </ul>
 
    ![Unsolved bug](assets/images/unsolvedd-bugs.jpg)
@@ -210,7 +215,7 @@ The'Play Game' will launch the game, laod the question and set the timer.</li>
 
 <hr>
 
-## Deployment
+## Deployment -
 <hr>
 <h2>Deploying the project</h2>
 <ol>To the deploy the project we are going to be using GitHub, to be able to launch the website we have to first...
@@ -220,15 +225,18 @@ The'Play Game' will launch the game, laod the question and set the timer.</li>
     <li>So for the website to be deployed online we have to select the 'Branch' on the 'Main' and set it to 'main', after this your project will turn green when ready to launch and will look like this...</li>
 </ol>
 
-[Screenshot of GitHub pages showing active website link for my game](assets/images/github-deploy.jpg)
+![Screenshot of GitHub pages showing active website link for my game](assets/images/github-deploy.jpg)
 
 ## Credits
 <hr>
-<ul>Content
+
+<h2>Content</h2>
+<ul>
     <li>Font taken from Google Fonts</li>
     <li>Icons used from Font Awesome</li>
     <li>Favicon.io for generating the favicon I am currently using</li>
 </ul>
+<h2>Code</h2>
 <ul>Code
     <li>Many inspirtaions from CI students, I took a look at everyones works, their ideas, their code on how they did what they did. It inspried me to make a quiz game and add some features like a timer or a question counter, these different ideas were inspired by looking at peoples work.</li>
     <li>Searching for different types of ideas on YouTube, StackOverflow gave me different ideas on how to write my code, how to get over obstacles.</li>
