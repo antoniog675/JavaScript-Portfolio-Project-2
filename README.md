@@ -1,12 +1,8 @@
 # Countries Of South America
 
-'Countries of South America' will test people's knowledge on countries of South America. In the game there are 12 points to collect, 12 countries in South America, and you will earn these points by getting the answers right. As soon as you start playing the game a quesition that relates to the answer/country will appear, you have to guess which country we are describing or asking you about. If you get the answer right, you will earn a point and will be able to move on to the next question, the goal is to get as many points as you can. There will be a timer, so users can test themselves by seeing who can finish the game the quickest with the highest points.
+'Countries of South America' will test people's knowledge on countries of South America. In the game there are 12 points to collect, 12 countries in South America, and you will earn these points by getting the answers right. As soon as players start playing the game a quesition that relates to the answer/country will appear, they have to guess which country we are describing or asking them about. If they get the answer right, the player will earn a point and will be able to move on to the next question, the goal is to get as many points as you can. There will be a timer, this adds pressure to the game. If the timer runs out, the question will be answered automatically and users will not be able to select an option.
 
 ![Am I responsive picture](assets/images/amiresponsive-country-game.jpeg)
-
-## Objective
-
-This site is targeted to people who love to test their knowledge, have an interest in geography and especially those who have an interest in the South American countries.
 
 # Features
 
@@ -14,11 +10,24 @@ This site is targeted to people who love to test their knowledge, have an intere
 ## Home page
 <hr>
 <ul>
-<li>In this page you have the name of the game in red, this will instantly give the user an idea of what the game is about. There will be an input where users can enter their names to be able to play the game and record there scores,  there will be a 'Play Game' button to be able to start the game.</li> 
-<li>Below these features there will be a 'Rules of The Game', if you press on this button a box with the rules will appear on the screen, this will contain the rules and explain to users how the game works, how earn points and how to complete the game, and if they want, they can also quit or restart the game.<li>
+<li>In this page you have the title of the game in red, this will instantly give the user an idea of what the game is about. 
+The'Play Game' will launch the game, laod the question and set the timer.</li> 
+<li>Below there will be a 'Rules of The Game' button, if you press on this button a box with the rules will appear on the screen, this will contain the rules and explain to users how the game works, how to earn points and how to complete the game, and if they want, the rules will explain that they can also quit or restart the game.<li>
 
 ![Home page appearance on a laptop](assets/images/laptop-main-page.jpg)
 ![Home page appearance on a mobile](assets/images/home-page-mobile.jpg)
+
+<details>
+<summary> 
+
+## **Rules of the game on Desktop and Mobile screens**
+</summary>
+
+![Image of how the rules box will look on a desktop screen](assets/images/rules-game.jpg)
+![Image of how the rules box will look on a mobile screen](assets/images/rules-game-mobile.jpg)
+</details>
+
+<hr>
 
 ## Within the Game
 
@@ -168,6 +177,7 @@ This site is targeted to people who love to test their knowledge, have an intere
 
 </details>
 
+<hr>
 
 <details>
 <summary><h2>Lighthouse results using Microsoft edge</h2></summary>
@@ -183,6 +193,7 @@ This site is targeted to people who love to test their knowledge, have an intere
 
 </details>
 
+<hr>
 
 <details>
     <summary><h2>Debugging</h2></summary>
@@ -197,37 +208,43 @@ This site is targeted to people who love to test their knowledge, have an intere
 
 </details>
 
+<hr>
+
 ## Deployment
 <hr>
-<ul>
-    <li></li>
-    <li></li>
-    <li></li>
-</ul>
+<h2>Deploying the project</h2>
+<ol>To the deploy the project we are going to be using GitHub, to be able to launch the website we have to first...
+    <li>Go to the GitHub repository and go on the project 'JavaScript-Portfolio-Project-2'</li>
+    <li>You will open this repository and select 'Settings' just above the green 'Gitpod' button</li>
+    <li>You will scroll down the 'GitHub Pages'</li>
+    <li>So for the website to be deployed online we have to select the 'Branch' on the 'Main' and set it to 'main', after this your project will turn green when ready to launch and will look like this...</li>
+</ol>
+
+[Screenshot of GitHub pages showing active website link for my game](assets/images/github-deploy.jpg)
 
 ## Credits
 <hr>
 <ul>Content
     <li>Font taken from Google Fonts</li>
-    <li>Icons used from Font Awesome [Font Awesome](https://fontawesome.com/icons) </li>
-    <li></li>
+    <li>Icons used from Font Awesome</li>
+    <li>Favicon.io for generating the favicon I am currently using</li>
+</ul>
+<ul>Code
+    <li>Many inspirtaions from CI students, I took a look at everyones works, their ideas, their code on how they did what they did. It inspried me to make a quiz game and add some features like a timer or a question counter, these different ideas were inspired by looking at peoples work.</li>
+    <li>Searching for different types of ideas on YouTube, StackOverflow gave me different ideas on how to write my code, how to get over obstacles.</li>
 </ul>
 
 ## Acknowledgements 
 <hr>
-<ul>
-    <li></li>
-    <li></li>
-    <li></li>
-</ul>
+<p>I completed this game based of the Learning Objectives for my 2nd Project which is part of my Full Stack Development Course, I'd like to thank my mentor for the help through the project, giving me ideas, inspiring me to keep going and helping me better my code.</p>
 
 ## Future plans 
 <hr>
 <ul>
-    <li>World wide scope</li>
-    <li>Game</li>
-    <p>Users will be able to skip questions and come back to them later once they rememeber, but this feature will only happen when the game gets bigger, so maybe for countries of Europe or all 50 states of America, otherwise, if the game was only 12 questions they can go ahead of the game a narrow all the countries down</p>
-    <li></li>
+    <li>I would like to implement a function where users can put there name down and the game will only let them play when that input area has been filled</li>
+    <li>With the name of the user I would like to create a global highscore where every user that played the game can store their codes and other people can see the top codes, this will record the number of correct answers the player got and how quickly they managed to complete the game</li>
+    <p>I would like the  questions to be randomised as well, but I had difficulties with this but I feel with more time and research I will find a way around this.</p>
+    <li>This was a struggle for me, when I first started JavaScript I could not follow a code, but now I can follow some code, I wish to write code on the spot instead of searching online for help, but baby steps.</li>
 </ul>
 
 
