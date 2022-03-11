@@ -32,15 +32,13 @@ const restart_quiz = document.querySelector(".end-game-buttons .restart");
 const quit_game = document.querySelector(".end-game-buttons .quit");
 
 inGameRestart.onclick = () =>{
-    window.location.reload();
-};
-
+window.location.reload();
+    };
 restart_quiz.onclick = () =>{
-    window.location.reload();
+window.location.reload();
 };
-
 quit_game.onclick = () =>{
-    window.location = 'index.html';
+window.location = 'index.html';
 };
 
 //When next button is pressed it will iterate through the length of the questions.

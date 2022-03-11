@@ -71,7 +71,10 @@
 
 ![Results box with number of correct answers users scored on mobile device](assets/images/results-box-mobile.jpg)
 
-## Wireframes 
+
+<details><summary><h1>Wireframes</h1></summary>
+
+<hr>
 
 <li>So for my game my initial design was for it to guess the country by the flag, but as I got on with the project it was just difficult to have my idea blossom, I ran into so many obstacles with finding a way to implement the image when the question was called out at random from the array 'questions'.</li>
 <li>So I went for a basic quiz question game.</li>
@@ -88,6 +91,7 @@
 
 ![home-restart-next](assets/images/home-restart-next.jpeg)
 
+</details>
 
 
 ## Design 
@@ -183,7 +187,7 @@
 <hr>
 <ul>Content
     <li>Font taken from Google Fonts</li>
-    <li>Icons used from Font Awesome [Font Awesome]https://fontawesome.com/);</li>
+    <li>Icons used from Font Awesome [Font Awesome](https://fontawesome.com/icons) </li>
     <li></li>
 </ul>
 
