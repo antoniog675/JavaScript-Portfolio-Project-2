@@ -40,28 +40,28 @@ The'Play Game' will launch the game, laod the question and set the timer.</li>
 <li>In this area there is going to be the question AND the options that users will be able to select from, users will have to read the question and guess which country they are being asked about or which country is being described.</li>
 <li>Users can hover over the question, the cursor will become a pointer on the options they can select, the color of he boxes will also change.</li>
 
-![Questions and options](assets/images/question-area-laptop.jpg)
+![Questions and options](assets/images/question-area-laptop2.jpg)
 
 
 <li>After users select their answer, the options will be disabled and they can only select  home, restart or the next question. Pointer will get disabled.</li> 
 <li>If the user select the correct answer then their option will turn green, next button will appear</li>
 
-![Users option turns green](assets/images/select-correct-answer.jpg)
+![Users option turns green](assets/images/select-correct-answer2.jpg)
 
 
 <li>This is the mobile verison of the game, when answer is correct it turns green, will act the same as on the laptop</li>
 
-![QUestions and options of the game on a mbile screen](assets/images/game-mobile-version.jpg)
+![Questions and options of the game on a mobile screen](assets/images/game-mobile-version2.jpg)
 
 <li>If users select the wrong answer then their answer will turn red, and the correct answer will appear green, the mobile version will also behave the same</li>
 
-![User option turns red when wrong and corret answer turns green](assets/images/wrong-answer-laptop.jpg)
+![User option turns red when wrong and correct answer turns green](assets/images/wrong-answer-laptop2.jpg)
 
-![User option turns red when wrong and corret answer turns green](assets/images/wrong-answer-laptop-mobile.jpg)
+![User option turns red when wrong and correct answer turns green](assets/images/wrong-answer-laptop-mobile2.jpg)
 
 <li>If user does not manage to beat the time then options will get disabled and correct answer will turn green, as you will be able to see, the timer is on 0 and the answer has been revealed</li>
 
-![Correct answer turns green automatically when user cannot answer withing 15 secons](assets/images/time-run-out-laptop.jpg)
+![Correct answer turns green automatically when user cannot answer withing 15 seconds](assets/images/time-run-out-laptop2.jpg)
 
 
 <li>In this part of the game there will be a Home button, a next question button and the Restart button.</li>
@@ -70,19 +70,19 @@ The'Play Game' will launch the game, laod the question and set the timer.</li>
 <li>The restart feature will restart the game from question one, this will not take the user to the home screen
 </ul>
 
-![Here will a nav bar with a home button, next button and restart button](assets/images/home-next-retart-bar-laptop.jpg)
+![Here will a nav bar with a home button, next button and restart button](assets/images/home-next-retart-bar-laptop3.jpg)
 
 <li>After question is selected next button will appear</li>
 
-![Here will a nav bar with a home button, next button and restart button](assets/images/home-next-retart-bar-laptop2.jpg)
+![Here will a nav bar with a home button, next button and restart button](assets/images/home-next-retart-bar-laptop4.jpg)
 
 <li>When all question have been answered a results box will appear on top of the questions with how many correct answers you got, and then two buttons at the bottom, one to go to the home page or to restart the game and play the game again</li>
 
-![Results box with number of correct answers users scored](assets/images/results-box-end-game.jpg)
+![Results box with number of correct answers users scored](assets/images/results-box-end-game2.jpg)
 
 <li>This is how the results will appear on a mobile device</li>
 
-![Results box with number of correct answers users scored on mobile device](assets/images/results-box-mobile.jpg)
+![Results box with number of correct answers users scored on mobile device](assets/images/results-box-mobile2.jpg)
 
 
 <details> <summary><h1>Wireframes</h1></summary>
@@ -144,8 +144,8 @@ The'Play Game' will launch the game, laod the question and set the timer.</li>
 <hr>
 
 ## Code Validation
-<h3>To test my project I used W3C HTML Validator, W3C CSS Validator and JSHint Validator, between the index.html and game.html there were 4 errors found, the CSS had a few mistake as well with e.g. 'border: solid red;' and the validator said I had to write this differently, 'border: solid; border-color: red;' this was solved but apart from that, no errors. With JSHint I got several errors regarding "	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)."
-</h3>
+<h4>To test my project I used W3C HTML Validator, W3C CSS Validator and JSHint Validator, between the index.html and game.html there were 4 errors found, the CSS had a few mistake as well with e.g. 'border: solid red;' and the validator said I had to write this differently, 'border: solid; border-color: red;' this was solved but apart from that, no errors. With JSHint I got several errors regarding "	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)."
+</h4>
 
 <li>W3C HTML Validator</li>
 
@@ -185,15 +185,16 @@ The'Play Game' will launch the game, laod the question and set the timer.</li>
 <hr>
 
 <h3>Desktop Testing</h3>
+
 ![Image of lighthouse reults for Microsoft Edge, home page](assets/images/IE-lighthouse-desktop.jpg)
 
-![Image of lighthouse reults for Microsoft Edge, game page](assets/images/IE-lighthouse-desktop-game.jpg)
+![Image of lighthouse reults for Microsoft Edge, game page](assets/images/IE-lighthouse-desktop-game22.jpg)
 
 <h3>Mobile Testing</h3>
 
-![Image of lighthouse reults for Microsoft Edge, home page on a mobile screen](assets/images/IE-lighoutse-mobile-home.jpg)
+![Image of lighthouse results for Microsoft Edge, home page on a mobile screen](assets/images/IE-lighoutse-mobile-home.jpg)
 
-![Image of lighthouse reults for Microsoft Edge, game page on aa mobile screen](assets/images/IE-lighoutse-mobile-game.jpg)
+![Image of lighthouse results for Microsoft Edge, game page on a mobile screen](assets/images/IE-lighoutse-mobile-game2.jpg)
 
 </details>
 
