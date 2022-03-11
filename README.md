@@ -5,14 +5,14 @@
 ![Am I responsive picture](assets/images/amiresponsive-country-game.jpeg)
 
 ## Objective
-<li>This site is targeted to people who love to test their knowledge, have an interest in geography and especially those who have an interest in the South American countries.</li>
 
-<li>You can view the live link here - "add website link here when completed"</li>
+This site is targeted to people who love to test their knowledge, have an interest in geography and especially those who have an interest in the South American countries.
 
-## Features
+# Features
+
+
+## Home page
 <hr>
-
-### <u>Home page</u>
 <ul>
 <li>In this page you have the name of the game in red, this will instantly give the user an idea of what the game is about. There will be an input where users can enter their names to be able to play the game and record there scores,  there will be a 'Play Game' button to be able to start the game.</li> 
 <li>Below these features there will be a 'Rules of The Game', if you press on this button a box with the rules will appear on the screen, this will contain the rules and explain to users how the game works, how earn points and how to complete the game, and if they want, they can also quit or restart the game.<li>
@@ -20,7 +20,7 @@
 ![Home page appearance on a laptop](assets/images/laptop-main-page.jpg)
 ![Home page appearance on a mobile](assets/images/home-page-mobile.jpg)
 
-### <u>Within the Game</u>
+## Within the Game
 
 <li>In this area the game will keep track of what question the user is on, there will be a timer that will make it feel like quiz, this will add more pressure to the game, it is going to be a 15 second timer, when the timer hits 0 the correct answer will be revealed, options will be disabled and user will have to move on to the next question.</li>
 
@@ -72,7 +72,7 @@
 ![Results box with number of correct answers users scored on mobile device](assets/images/results-box-mobile.jpg)
 
 
-<details><summary><h1>Wireframes</h1></summary>
+<details> <summary><h1>Wireframes</h1></summary>
 
 <hr>
 
@@ -97,18 +97,29 @@
 ## Design 
 <hr>
 <ul>
-    <li>Fonts</li>
+    <li><h2>Fonts</li></h2>
     <p>The fonts that will be used for this project are 'Smooch Sans' and 'Fredoka'</p>
-    <li>Colors</li>
+    <p>Smooch Sans is going to be used for headings, and for areas where users are going to be looking at majority of the time. Fredoka will be used for the rest of the website, time counter, the results pop up box at the end.</p>
+    <li><h2>Colors</h2></li>
     <p>The main color for the game used was yellow (#DECC2A), the title will be in a red container and the 'Play Game' Button is in green container. The main page has a hidden flag within it and these are the colors of Bolivia.</p>
+    <p>Colors for timer are going to be opposite colors from the main color so that it stand out more, adds accessibility to users so that it does not blend into the background too much.</p>
+    <p>Colors for buttons will invert when user hovers over them, this will add  interactivity and let users know that it is a button and that it can be pressed.</p>
 </ul>
 
 ## Technolgies Used
 <hr>
-<ul>
+<ul> Languages used
     <li>HTML5</li>
     <li>CSS3</li>
     <li>JavaScript</li>
+</ul>
+
+<ul>
+    <li>Google Fonts</li>
+    <li>Font Awesome</li>
+    <li>Github</li>
+    <li>Gitpod</li>
+    <li>ProtoPie</li>
 </ul>
 
 # Testing
@@ -119,6 +130,8 @@
     <li>Safari</li>
     <li>Internet Explorer</li>
 </ul>
+
+<hr>
 
 ## Code Validation
 <h3>To test my project I used W3C HTML Validator, W3C CSS Validator and JSHint Validator, between the index.html and game.html there were 4 errors found, the CSS had a few mistake as well with e.g. 'border: solid red;' and the validator said I had to write this differently, 'border: solid; border-color: red;' this was solved but apart from that, no errors. With JSHint I got several errors regarding "	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)."
@@ -136,11 +149,11 @@
 
 ![](assets/images/js-warnings-validator.jpg)
 
-<h2>Lighthouse Testing</h2>
+<details>
+<summary><h2>Lighthouse Testing</h2></summary>
 
 <li>I tested my website using the lighthouse function on Google</li>
 <li>These are the results I got</li>
-
 <li>This image is showing the results of the home page of the game</li>
 
 ![This image is showing the results of the home page of the game](assets/images/lighthouse.jpg)
@@ -153,7 +166,12 @@
 
 ![](assets/images/game-page-mobile-LH.jpg)
 
-<h3>These are the lighthouse results using Microsoft edge</h3>
+</details>
+
+
+<details>
+<summary><h2>Lighthouse results using Microsoft edge</h2></summary>
+<hr>
 
 ![Image of lighthouse reults for Microsoft Edge, home page](assets/images/IE-lighthouse-desktop.jpg)
 
@@ -163,17 +181,21 @@
 
 ![Image of lighthouse reults for Microsoft Edge, game page on aa mobile screen](assets/images/IE-lighoutse-mobile-game.jpg)
 
+</details>
 
 
-<ul>Bugs
+<details>
+    <summary><h2>Debugging</h2></summary>
+    <ul>
     <li>Resolved bugs</li>
     <li>One of the bugs I got was the console error.favicon, after searching what the problem was it was easy to fix, the website now has a favicon and the error has gone away
     <li>Unresolved bugs</li>
     <li>I have this on my console when I load the index.html, but when I load the game up the console error dissapears and the code is fine....</li>
+    </ul>
 
    ![Unsolved bug](assets/images/unsolvedd-bugs.jpg)
 
-</ul>
+</details>
 
 ## Deployment
 <hr>

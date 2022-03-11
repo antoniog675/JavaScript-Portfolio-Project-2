@@ -75,6 +75,11 @@ a {
     cursor: pointer;
 }
 
+.game-features button:hover {
+    background-color: black;
+    color: white;
+}
+
 .container2 {
     display: flex;
     flex-direction: column;
@@ -183,6 +188,11 @@ a {
     display: none;
     font-family: Smooch Sans;
     cursor: pointer;
+}
+
+.home-next-restart .next-button:hover {
+    background-color: black;
+    color: white;
 }
 
 .home-next-restart .restart-button {
