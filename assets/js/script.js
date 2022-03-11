@@ -1,11 +1,14 @@
+// current question count
+let CURRENT_QUESTION_COUNTER = 1;
+
 // For pop up message of the rules
 let message = 0;
+
 function pop() {
-    if(message == 0) {
+    if (message == 0) {
         document.getElementById("rules-message-box").style.display = "block";
         message = 1;
-    }
-    else {
+    } else {
         document.getElementById("rules-message-box").style.display = "none";
         message = 0;
     }
@@ -31,22 +34,26 @@ const inGameRestart = document.querySelector(".home-next-restart .restart-button
 const restart_quiz = document.querySelector(".end-game-buttons .restart");
 const quit_game = document.querySelector(".end-game-buttons .quit");
 
-inGameRestart.onclick = () =>{
+inGameRestart.onclick = () => {
     window.location.reload();
 };
 
-restart_quiz.onclick = () =>{
+restart_quiz.onclick = () => {
     window.location.reload();
 };
 
-quit_game.onclick = () =>{
+quit_game.onclick = () => {
     window.location = 'index.html';
 };
 
+function getRandomIndex() {
+    return Math.floor(Math.random() * questions.length);
+}
+
 //When next button is pressed it will iterate through the length of the questions.
-next_button.onclick = ()=>{
-    if(question_count < questions.length - 1){
-        question_count++;
+next_button.onclick = () => {
+    if (question_count < questions.length - 1) {
+        question_count = getRandomIndex();
         que_number++;
         showQuestion(question_count);
         questionsCounter(que_number);
@@ -62,17 +69,18 @@ next_button.onclick = ()=>{
 //This section will get the questions from 'questions and change the innerHTML of the question and available options
 function showQuestion(index) {
     const que_text = document.querySelector("#game-question-flag");
-    let que_tag = '<span>'+ questions[index].num + '. '+ questions[index].question +'</span>';
-    let option_tag = '<div class="option">'+ questions[index].answer[0] +'<span></span></div>'
-                    + '<div class="option">'+ questions[index].answer[1] +'<span></span></div>'
-                    + '<div class="option">'+ questions[index].answer[2] +'<span></span></div>'
-                    + '<div class="option">'+ questions[index].answer[3] +'<span></span></div>';
+    let que_tag = '<span>' + CURRENT_QUESTION_COUNTER + '. ' + questions[index].question + '</span>';
+    let option_tag = '<div class="option">' + questions[index].answer[0] + '<span></span></div>' +
+        '<div class="option">' + questions[index].answer[1] + '<span></span></div>' +
+        '<div class="option">' + questions[index].answer[2] + '<span></span></div>' +
+        '<div class="option">' + questions[index].answer[3] + '<span></span></div>';
     que_text.innerHTML = que_tag;
     option_list.innerHTML = option_tag;
     const option = option_list.querySelectorAll(".option");
     for (let i = 0; i < option.length; i++) {
         option[i].setAttribute("onclick", "optionSelected(this)");
     }
+    questions.pop(index);
 }
 
 //To compare the users option agaisnt the correct answer
@@ -81,24 +89,24 @@ function optionSelected(answer) {
     let userAns = answer.textContent;
     let correctAns = questions[question_count].correctAnswer;
     let allOptions = option_list.children.length;
-    if(userAns == correctAns) {
+    if (userAns == correctAns) {
         userScore += 1;
         console.log(userScore); //To help with debugging
         answer.classList.add("correct");
-        console.log("answer is correct");  //To help with debugging
+        console.log("answer is correct"); //To help with debugging
     } else {
         answer.classList.add("incorrect");
         console.log("answer is wrong");
 
         // If the answer is incorrect then it will automatically show the correct answer
         for (let i = 0; i < allOptions; i++) {
-        if(option_list.children[i].textContent == correctAns) {
-            option_list.children[i].setAttribute("class", "option correct");
+            if (option_list.children[i].textContent == correctAns) {
+                option_list.children[i].setAttribute("class", "option correct");
+            }
         }
-    }
 
     }
-    
+
     //Once user answer is returned, options will be disabled
     for (let i = 0; i < allOptions; i++) {
         option_list.children[i].classList.add("disabled");
@@ -110,18 +118,19 @@ function optionSelected(answer) {
 function showResultBox() {
     result_box.classList.add("activeResult");
     const scoreText = document.querySelector(".score-text");
-    let scoreTag = '<span>You scored<p>'+ userScore +'</p>out of<p>'+ questions.length+'</p></span>';
+    let scoreTag = '<span>You scored<p>' + userScore + '</p>out of<p>' + questions.length + '</p></span>';
     scoreText.innerHTML = scoreTag;
-    }   
+}
 
 //This function is to set the time, to count down from 15, and if users do not manage to answer the question it will reveal the answer, disable options and set next button ready for the next question
 
 function startTimer(time) {
     counter = setInterval(timer, 1000);
+
     function timer() {
         timeCount.textContent = time;
         time--;
-        if(time < 0) {
+        if (time < 0) {
             clearInterval(counter);
             timeCount.textContent = "0";
 
@@ -129,7 +138,7 @@ function startTimer(time) {
             let allOptions = option_list.children.length;
 
             for (let i = 0; i < allOptions; i++) {
-                if(option_list.children[i].textContent == correctAns) {
+                if (option_list.children[i].textContent == correctAns) {
                     option_list.children[i].setAttribute("class", "option correct");
                 }
             }
@@ -139,18 +148,18 @@ function startTimer(time) {
             }
             next_button.style.display = "block";
         }
-    } 
+    }
 }
 
 //This function counts as users go through the questions, if on question 7, it will tell them question 7, if question 2 it will say question 2/12 etc
-function questionsCounter(index) {
+function questionsCounter() {
     const question_counter = document.querySelector(".total-que");
-    let totalQuestionCount = '<span><p>'+ index +'</p>Of<p>'+ questions.length +'</p>Questions</span>';
+    let totalQuestionCount = '<span><p>' + CURRENT_QUESTION_COUNTER + '</p>Of<p>' + questions.length + '</p>Questions</span>';
     question_counter.innerHTML = totalQuestionCount;
+    CURRENT_QUESTION_COUNTER += 1;
 }
 //Questions array
-const questions = [
-    {
+const questions = [{
         num: 1,
         question: "Which country is Rio de Janiero located in?",
         answer: [
@@ -158,7 +167,7 @@ const questions = [
             "Nigeria",
             "Peru",
             "Lemon"
-            ],
+        ],
         correctAnswer: "Brazil"
     },
 
@@ -170,7 +179,7 @@ const questions = [
             "Guayana",
             "England",
             "Bolivia"
-            ],
+        ],
         correctAnswer: "Bolivia"
     },
 
@@ -294,4 +303,4 @@ const questions = [
 ];
 
 //Will load game only if document is loaded, will start functions showQuestion(), questionCounter() and startTimer() only when DOM is loaded
-document.addEventListener("DOMContentLoaded", showQuestion(0), questionsCounter(1), startTimer(15));
+document.addEventListener("DOMContentLoaded", showQuestion(getRandomIndex()), questionsCounter(CURRENT_QUESTION_COUNTER), startTimer(15));
