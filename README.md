@@ -5,8 +5,7 @@
 
 ![Am I responsive picture](assets/images/amiresponsive-country-game.jpeg)
 
-# Features -
-
+# Features 
 
 ## Home page -
 <hr>
@@ -215,8 +214,8 @@ The'Play Game' will launch the game, laod the question and set the timer.</li>
 
 <hr>
 
-## Deployment -
-<hr>
+
+# Deployment
 <h2>Deploying the project</h2>
 <ol>To the deploy the project we are going to be using GitHub, to be able to launch the website we have to first...
     <li>Go to the GitHub repository and go on the project 'JavaScript-Portfolio-Project-2'</li>
