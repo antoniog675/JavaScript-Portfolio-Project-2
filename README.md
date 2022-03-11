@@ -7,7 +7,7 @@
 
 # Features 
 
-## Home page -
+## Home page
 <hr>
 <ul>
 <li>In this page you have the title of the game in red, this will instantly give the user an idea of what the game is about. 
